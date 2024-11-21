@@ -1,4 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
+// import backgroundImage from "../../public/Images/Rectangle 4162.png"
 
 const features = [
   "100% Placement Assistance",
@@ -9,7 +10,7 @@ const features = [
 function IntroPage() {
   return (
     <div
-      className="w-screen h-[700px] overflow-hidden"
+      className="w-screen h-[700px] overflow-hidden bg-[url('/Rectangle 4162.png')]"
       style={{
         background:
           "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",
