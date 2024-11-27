@@ -1,7 +1,8 @@
+
   
- .swiper-slide {
+  .swiper-slide {
     width: 210px !important; /* Default width for all images */
-    height: 380px !important;
+    height: 500px !important;
     /* transition: transform 0.5s ease-in-out; */
   }
   
@@ -18,32 +19,13 @@
       height: 36rem !important;
     }
   }
-  .swiper-slide-active {
-    transform: scale(2) !important; /* Larger scale for the active slide */
-    /* transition: transform 0.2s ease-in-out;  */
-  }
   
   .swiper-slide img {
-    width: 150px !important;
-    height: 380px !important;
-    /* object-fit: cover; */
-    border-radius: 25px; /* Optional: Add rounded corners */
-    /* transition: width 0.5s ease-in-out; */
+    width: 32rem;
+    height: 40rem;
+    border-radius: 2rem;
+    object-fit: cover;
   }
-
-  .swiper-slide-active img {
-    width: 520px !important; /* Wider width for the active image */
-    height: 380px !important; /* Keep the height consistent */
-  }
-  .swiper-slide-next img {
-    margin-left: 40px;
-    margin-right: 20px;
-  }
-
-  /* .swiper-slide-prev img { */
-    /* margin-left: 40px !important; */
-    /* margin-right: 80px !important; */
-  /* } */
   
   .swiper-slide-shadow-left,
   .swiper-slide-shadow-right {

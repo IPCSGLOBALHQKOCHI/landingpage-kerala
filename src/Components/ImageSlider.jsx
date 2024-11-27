@@ -1,78 +1,110 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import image1 from "/Images/Frame 427319136.png"
-import image2 from "/Images/Frame 427319136.png"
-import image3 from "/Images/Frame 427319136.png"
-import image4 from "/Images/Frame 427319136.png"
-import image5 from "/Images/Frame 427319136.png"
-import image6 from "/Images/Frame 427319136.png"
-import image7 from "/Images/Frame 427319136.png"
-
+import image1 from "/assets/Frame 427319140.png"
+import image2 from "/assets/Frame 427319141.png"
+import image3 from "/assets/Frame 427319145.png"
+import image4 from "/assets/Frame 427319146.png"
+import image5 from "/assets/Frame 427319145.png"
+import image6 from "/assets/Frame 427319141.png"
+import image7 from "/assets/Frame 427319146.png"
+import curvingImageT from "/assets/WHITE HALF CIRCLE 1 (1).png"
+import curvingImageB from "/assets/Half circle 2 1.png"
 
 
 
 const ImageSlider = () => {
-  const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [image1, image2, image3, image4, image5, image6, image7];
 
   const handleNext = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 1) % 5
-      );
-      return updatedIndexes;
-    });
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const handleBack = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 4) % 5
-      );
-
-      return updatedIndexes;
-    });
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + images.length) % images.length
+    );
   };
 
-  const images = [image1,image2,image3,image4,image5,image6,image7];
-
-  const positions = ["center", "left", "right"];
-
-  const imageVariants = {
-    center: { x: "0%", scale: 1, zIndex: 5 },
-    left: { x: "-110%", scale: 1, zIndex: 2 },
-    right: { x: "110%", scale: 1, zIndex: 1 },
-  };
   return (
-    <div className=" relative flex items-center flex-col justify-center h-screen mt-20">
-      {images.map((image, index) => (
-        <motion.img
-          key={index}
-          src={image}
-          alt={image}
-          className="rounded-[12px]"
-          initial="center"
-          animate={positions[positionIndexes[index]]}
-          variants={imageVariants}
-          transition={{ duration: 0.5 }}
-          style={{ width: "31%", position: "absolute",height:"650px" }}
-        />
-      ))}
-      <div className="flex flex-row gap-3">
-        <button
-          className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
-          onClick={handleBack}
-        >
-          Back
-        </button>
-        <button
-          className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
-          onClick={handleNext}
-        >
-          Next
-        </button>
-      </div>
+    <div className="relative flex items-center justify-center h-screen   overflow-hidden">
+    {/* Top Image */}
+    <div
+      className="absolute top-0 left-0 right-0 "
+      style={{
+        width: "100%",
+      }}
+    >
+      <img
+        src={curvingImageT} // Replace with the top image source
+        alt="Top Image"
+        className=""
+      />
     </div>
+  
+    {/* Sliding Images */}
+    <motion.div
+      className="flex gap-6"
+      style={{
+        width: `calc(${images.length * 33}% + ${images.length - 1} * 1rem)`,
+      }}
+      animate={{ x: `-${currentIndex * (100 / images.length)}%` }}
+      transition={{ type: "spring", stiffness: 50 }}
+    >
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className="flex-shrink-0"
+          style={{
+            width: "33%",
+            height: "600px",
+          }}
+        >
+          <img
+            src={image}
+            alt={`Slide ${index}`}
+            className="w-full h-[600px] object-cover rounded-md shadow-lg"
+          />
+        </div>
+      ))}
+    </motion.div>
+  
+    {/* Bottom Image */}
+    <div
+      className="absolute bottom-0 left-0 right-0"
+      style={{
+        width: "100%",
+      }}
+    >
+      <img
+        src={curvingImageB} // Replace with the bottom image source
+        alt="Bottom Image"
+        className="w-full h-full object-cover rounded-md shadow-lg"
+      />
+    </div>
+  
+    {/* Left Arrow */}
+    <button
+      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full shadow-lg p-3 hover:bg-gray-300 z-10"
+      onClick={handlePrevious}
+    >
+      ❮
+    </button>
+  
+    {/* Right Arrow */}
+    <button
+      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full shadow-lg p-3 hover:bg-gray-300 z-10"
+      onClick={handleNext}
+    >
+      ❯
+    </button>
+  </div>
+  
   );
 };
 
 export default ImageSlider;
+
+
+

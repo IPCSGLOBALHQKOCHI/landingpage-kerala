@@ -4,7 +4,6 @@ import image3 from "/Images/Frame 427319093.png";
 import image4 from "/Images/Frame 427319147.png";
 import image5 from "/Images/Frame 427319148.png";
 import image6 from "/Images/Frame 427319149.png";
-import image7 from "/Images/Frame 427319136.png";
 
 export const slides = [
     {
@@ -51,7 +50,7 @@ export const slides = [
         name: "Estate Tour",
         description:
           "A revitalizing experience awaits you along with a chance to reconnect with nature.",
-        imageUrl: image7,
+        imageUrl: image3,
       },
       {
         name: "Estate Tour",
@@ -67,6 +66,6 @@ export const slides = [
         name: "Estate Tour",
         description:
           "A revitalizing experience awaits you along with a chance to reconnect with nature.",
-        imageUrl: image7,
+        imageUrl: image5,
       },
   ];

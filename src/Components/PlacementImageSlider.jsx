@@ -54,12 +54,12 @@ const PlacementImageSlider = () => {
       <style>
         {`
           .swiper-slide-active {
-            transform: scale(1.2) !important; /* Larger scale for the active slide */
-            transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+            transform: scale(1.2) !important; 
+            transition: transform 0.5s ease-in-out; 
           }
 
           .swiper-slide-active img {
-            width: 400px !important; /* Wider width for the active image */
+            width: 400px !important; 
           }
         `}
       </style>
