@@ -1,5 +1,5 @@
 import React from 'react'
-import PlacementImageSlider from '../Components/PlacementImageSlider';
+import PlacementImageSlider from '../Components/Placement/PlacementImageSlider';
 
 function Placement() {
   return (

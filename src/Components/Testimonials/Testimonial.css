@@ -1,0 +1,36 @@
+/* Container styling for the Swiper */
+.swiper-container {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: aqua;
+  }
+  
+  /* Swiper slide styling */
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Styling for the images */
+  .image {
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Rectangular shape */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling for the headings */
+  .heading {
+    font-size: 1.25rem; /* Slightly larger font for emphasis */
+    font-weight: 600;
+    color: #004d4d; /* Complementary color for text */
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  

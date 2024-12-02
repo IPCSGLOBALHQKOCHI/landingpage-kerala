@@ -1,8 +1,12 @@
+
   
- .swiper-slide {
-    width: 210px !important; /* Default width for all images */
-    height: 380px !important;
+  .swiper-slide {
+    width: 350px !important; /* Default width for all images */
+    height: 480px !important;
+    border-radius: 25px;
     /* transition: transform 0.5s ease-in-out; */
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   
   @media (max-width: 500px) {
@@ -13,37 +17,18 @@
       width: 28rem !important;
       height: 36rem !important;
     }
-    .swiper-slide img {
+    .swiper-slide video {
       width: 28rem !important;
       height: 36rem !important;
     }
   }
-  .swiper-slide-active {
-    transform: scale(2) !important; /* Larger scale for the active slide */
-    /* transition: transform 0.2s ease-in-out;  */
-  }
   
-  .swiper-slide img {
-    width: 150px !important;
-    height: 380px !important;
-    /* object-fit: cover; */
-    border-radius: 25px; /* Optional: Add rounded corners */
-    /* transition: width 0.5s ease-in-out; */
+  .swiper-slide video {
+    width: 100% ;
+    height: 500px;
+    border-radius: 25px;
+    object-fit: cover;
   }
-
-  .swiper-slide-active img {
-    width: 520px !important; /* Wider width for the active image */
-    height: 380px !important; /* Keep the height consistent */
-  }
-  .swiper-slide-next img {
-    margin-left: 40px;
-    margin-right: 20px;
-  }
-
-  /* .swiper-slide-prev img { */
-    /* margin-left: 40px !important; */
-    /* margin-right: 80px !important; */
-  /* } */
   
   .swiper-slide-shadow-left,
   .swiper-slide-shadow-right {
@@ -122,4 +107,45 @@
   
   .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary);
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+  /* background-color: #000;  */
+  color: #fff; /* Arrow color */
+  width: 50px; /* Arrow size */
+  height: 50px;
+  border-radius: 50%; /* Circle shape for arrows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px; /* Size of the arrow icon */
+  color: #fff; /* Arrow color */
+}
+
+
+
+.swiper-pagination {
+    bottom: 10px; /* Adjust position */
+    margin-left: 40%;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #ffffff; /* Default color for inactive dots */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Round shape for dots */
+  }
+    
+  .swiper-pagination-bullet:not(:first-child) {
+    margin-left: 10px; /* Space between the dots */
+  }
+  
+  /* Limit to 3 dots */
+  .swiper-pagination-bullet:nth-child(n+5) {
+    display: none; /* Hide dots after the 3rd one */
   }
