@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialsCards from "../Components/Testimonials/Testimonialscards";
-import CommaVector from "/assets/Vector (5).png";
+import CommaVector from "../../src/assets/vectors/Vector (5).png";
 
 function TestimonialSection() {
   return (

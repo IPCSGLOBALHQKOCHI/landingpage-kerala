@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import dropDown from "/assets/Vector (8).png"
+import dropDown from "../../../src/assets/vectors/Vector (8).png"
 
 function QuestionSection() {
   const leftQuestions = [
     { question: "How long do the courses take?", answer: "We offer extensive 4-month and 6-month programs designed to empower individuals for successful futures." },
-    { question: "What qualifications do I need to enroll?", answer: "Basic qualifications or relevant experience depending on the course." },
-    { question: "How much do the courses cost?", answer: "The costs vary based on the program. Please check the specific course page for details." },
-    { question: "Do you provide study materials?", answer: "Yes, we provide comprehensive study materials for all courses." },
-    { question: "How much do the courses cost?", answer: "The costs vary based on the program. Please check the specific course page for details." },
-    { question: "Do you provide study materials?", answer: "Yes, we provide comprehensive study materials for all courses." },
+    { question: "Are the courses offered online or in person?", answer: "We offer flexible learning options, including online and in-person classes, tailored to individual preferences." },
+    { question: "How much do the courses cost?", answer: "Our courses are priced to be affordable and accessible for everyone." },
+    { question: "Do you provide study materials?", answer: "We provide necessary study materials for each course, ensuring students have the resources they need" },
+    { question: "What qualifications do I need to enroll?", answer: "Our skill-based courses are open to all, regardless of previous qualifications." },
+    { question: "Is the certification recognized?", answer: "Our certificates are recognized by industry leaders, enhancing career opportunities." },
   ];
 
   const rightQuestions = [
     { question: "Is the certification recognized?", answer: "Yes, our certifications are widely recognized and valued by employers." },
-    { question: "Can international students enroll?", answer: "Absolutely! Our programs are open to students worldwide." },
-    { question: "How can I register for a course?", answer: "You can register online through our website in a few easy steps." },
-    { question: "How do you assist with job placements?", answer: "We offer placement assistance and guidance to help you land your dream job." },
-    { question: "How can I register for a course?", answer: "You can register online through our website in a few easy steps." },
-    { question: "How do you assist with job placements?", answer: "We offer placement assistance and guidance to help you land your dream job." }
+    { question: "Can international students enroll?", answer: "We welcome international students and offer support with accommodation and care throughout their studies" },
+    { question: "How can I register for a course?", answer: "To register, simply scan the QR code, meet with our counselor to discuss your goals, attend a free demo session, and pay a small fee to secure your class slot." },
+    { question: "Can I retake courses or exams if needed?", answer: "We offer retake options for courses and exams, ensuring students have the opportunity to excel." },
+    { question: "Do you help with job interview preparation??", answer: "We offer guidance and mock interviews to help students prepare for real-world job opportunities" },
+    { question: "How do you assist with job placements?", answer: "Our team assists students in securing placements and providing support throughout the process." }
   ];
 
   // State to track open status for the left and right dropdown sections

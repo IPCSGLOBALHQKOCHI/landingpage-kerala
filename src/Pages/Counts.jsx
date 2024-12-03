@@ -1,3 +1,9 @@
+import GlobeImage from "../../src/assets/vectors/_x31_33_x2C__Globe_x2C__Location_x2C__Seo.png"
+import ProjectImage from "../../src/assets/vectors/gear_850752 1.png"
+import ProfessionalImage from "../../src/assets/vectors/Vector (2).png"
+import PartnersImage from "../../src/assets/vectors/Vector (3).png"
+
+
 function Counts() {
   return (
     <div className="w-full h-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20 mb-8 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40">
@@ -5,7 +11,7 @@ function Counts() {
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
-          src="/assets/_x31_33_x2C__Globe_x2C__Location_x2C__Seo.png"
+          src={GlobeImage}
           className="w-16 h-16"
           alt="Icon"
         />
@@ -22,7 +28,7 @@ function Counts() {
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
-          src="/assets/gear_850752 1.png"
+          src={ProjectImage}
           className="w-16 h-16"
           alt="Icon"
         />
@@ -39,7 +45,7 @@ function Counts() {
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
-          src="/assets/Vector (2).png"
+          src={ProfessionalImage}
           className="w-16 h-16"
           alt="Icon"
         />
@@ -56,7 +62,7 @@ function Counts() {
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
-          src="/assets/Vector (3).png"
+          src={PartnersImage}
           className="w-16 h-16"
           alt="Icon"
         />

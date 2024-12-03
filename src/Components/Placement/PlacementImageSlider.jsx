@@ -80,22 +80,21 @@ import "./PlacementSlides.css";
 
 const PlacementImageSlider = () => {
   const swipperWrapperRef = useRef(null);
-
   return (
-    <mian>
-      <div className="container">
+    // <main>
+    //   <div className="container mt-16">
         <Swiper
           modules={[Autoplay, Pagination]}
           grabCursor={true}
-          spaceBetween={20}
-          slidesPerView={"auto"}
-          initialSlide={5}
+          spaceBetween={0}
+          slidesPerView={4}
+        //   initialSlide={5}
           // loopAdditionalSlides={}
           centeredSlides={true}
           loop={true}
-          speed={3000}
+          speed={1500}
           autoplay={{
-            delay: 2000,
+            delay: 1000,
             disableOnInteraction: false,
           }}
         
@@ -108,15 +107,25 @@ const PlacementImageSlider = () => {
             );
           }}
         >
-          {slides.map((image, index) => (
-            <SwiperSlide key={index}>
-              <img src={image.imageUrl} alt={image.name} />
-              <p>{image.name}</p>
-            </SwiperSlide>
-          ))}
+         {slides.map((image, index) => (
+  <SwiperSlide key={index} className="relative">
+    <img 
+      src={image.imageUrl} 
+      alt={image.name} 
+      className="w-full h-full object-cover" 
+    />
+    <p className="absolute bottom-4  w-full text-left text-yellow-400  p-2">
+      {image.name}
+    </p>
+    <p className="absolute bottom-10  w-full text-left text-yellow-400  p-2">
+        {image.Position}
+        </p>
+  </SwiperSlide>
+))}
+
         </Swiper>
-      </div>
-    </mian>
+    //   </div>
+    // </main>
   );
 };
 

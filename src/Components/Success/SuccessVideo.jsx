@@ -11,37 +11,37 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const slides = [
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Ruksana Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Ruksana Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Sinu Jasmin Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Ruksana Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Ruksana Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Sinu Jasmin Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
   {
-    video: "/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
   },
 ];
 

@@ -2,6 +2,12 @@ import { FiArrowRight } from "react-icons/fi";
 // import IntroVideo from "../Components/IntroVideo";
 import VideoSlider from "../Components/videoSlider";
 // import backgroundImage from "../../public/Images/Rectangle 4162.png"
+import BgLogo from "../../src/assets/images/IPCS GLOBAL logo-01 (1) 3.png"
+import BgLogo2 from "../../src/assets/images/IPCS GLOBAL logo-01 (1) 2 (1).png"
+import MainImage from "../../src/assets/images/image 7.png"
+import BgMobile from "../../src/assets/images/Rectangle 4162 (1).png"
+import BgDeskTop from "../../src/assets/images/Rectangle 4162.png"
+import TickVector from "../../src/assets/vectors/Vector.png"
 
 const features = [
   "100% Placement Assistance",
@@ -22,7 +28,7 @@ function IntroPage() {
       <div className="relative">
         {/* Background image */}
         <img
-          src="/Images/IPCS GLOBAL logo-01 (1) 3.png"
+          src={BgLogo}
           alt="Background"
           className="absolute top-[-15px] left-[-15px] opacity-10 w-[150px] sm:w-[200px] md:w-[300px] lg:w-[500px] xl:w-[580px]"
         />
@@ -31,7 +37,7 @@ function IntroPage() {
         <div className="w-full md:w-1/2 flex ">
           {/* Main Image */}
           <img
-            src="/Images/image 7.png"
+            src={MainImage}
             alt="Tech World"
             className="absolute top-0 left-0 z-[100] opacity-100 mt-12 xl:mt-16 xl:ml-24 ml-28 sm:mt-14 sm:ml-14 md:mt-14 md:ml-20 w-40 sm:w-52 md:w-auto"
           />
@@ -57,7 +63,7 @@ function IntroPage() {
             {features.map((feature, index) => (
               <div key={index} className="flex items-center">
                 <img
-                  src="/assets/Vector.png"
+                  src={TickVector}
                   alt="Tick"
                   className="w-4 h-4 sm:w-4 sm:h-4 md:w-4 md:h-4 lg:w-5 lg:h-5"
                 />
@@ -88,14 +94,14 @@ function IntroPage() {
 <div className=" w-full h-screen">
   {/* Default image for larger screens */}
   <img
-    src="/Images/Rectangle 4162.png"
+    src={BgDeskTop}
     alt="Rectangle"
     className="hidden  sm:block h-[750px] w-full"
   />
   
   {/* Mobile image */}
   <img
-    src="/Images/Rectangle 4162 (1).png"
+    src={BgMobile}
     alt="Rectangle Mobile"
     className="block sm:hidden h-[600px] w-full"
   />
@@ -105,7 +111,7 @@ function IntroPage() {
       {/* Background logo */}
       <div className="relative">
         <img
-          src="/Images/IPCS GLOBAL logo-01 (1) 2 (1).png"
+          src={BgLogo2}
           alt="Logo"
           className="absolute -bottom-56 -right-28  opacity-20 "
         />
