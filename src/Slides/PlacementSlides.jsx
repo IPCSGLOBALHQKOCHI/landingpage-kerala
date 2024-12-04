@@ -1,9 +1,8 @@
-import image1 from "../../src/assets/images/DSC03468.JPG";
-import image2 from "../../src/assets/images/DSC03471.JPG";
-import image3 from "../../src/assets/images/DSC03483.JPG";
-import image4 from "../../src/assets/images/DSC03488.JPG";
-import image5 from "../../src/assets/images/DSC03494.JPG";
-// import image6 from "/Images/DSC05776 1.png";
+import image1 from "/assets/DSC03468.JPG";
+import image2 from "/assets/DSC03471.JPG";
+import image3 from "/assets/DSC03483.JPG";
+import image4 from "/assets/DSC03488.JPG";
+import image5 from "/assets/DSC03494.JPG";
 
  export const slides = [
     {
