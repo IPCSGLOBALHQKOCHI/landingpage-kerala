@@ -8,6 +8,7 @@ import MainImage from "../../src/assets/images/image 7.png"
 import BgMobile from "../../src/assets/images/Rectangle 4162 (1).png"
 import BgDeskTop from "../../src/assets/images/Rectangle 4162.png"
 import TickVector from "../../src/assets/vectors/Vector.png"
+// import SpotlightCursor from "../Components/CursorEffect/SpotlightCursor";
 
 const features = [
   "100% Placement Assistance",
@@ -24,6 +25,9 @@ function IntroPage() {
           "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",
       }}
     >
+      <span className="z-0">
+      {/* <SpotlightCursor /> */}
+      </span>
       {/* Wrapper div for the main content */}
       <div className="relative">
         {/* Background image */}

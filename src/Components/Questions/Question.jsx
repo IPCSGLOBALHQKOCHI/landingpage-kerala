@@ -26,17 +26,16 @@ function QuestionSection() {
 
   // Toggle function for individual dropdowns in each section
   const toggleLeftDropdown = (index) => {
-    const newStates = [...leftOpenStates];
-    newStates[index] = !newStates[index];
+    const newStates = Array(leftQuestions.length).fill(false); // Reset all to false
+    newStates[index] = !leftOpenStates[index]; // Toggle the selected one
     setLeftOpenStates(newStates);
   };
-
+  
   const toggleRightDropdown = (index) => {
-    const newStates = [...rightOpenStates];
-    newStates[index] = !newStates[index];
+    const newStates = Array(rightQuestions.length).fill(false); // Reset all to false
+    newStates[index] = !rightOpenStates[index]; // Toggle the selected one
     setRightOpenStates(newStates);
-  };
-
+  };  
   return (
     <div className=" py-10 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -76,7 +76,7 @@ import gsap from "gsap";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { slides } from "../../Slides/PlacementSlides";
-import "./PlacementSlides.css";
+import "./PlacementImageSlider.css";
 
 const PlacementImageSlider = () => {
   const swipperWrapperRef = useRef(null);
@@ -86,7 +86,7 @@ const PlacementImageSlider = () => {
         <Swiper
           modules={[Autoplay, Pagination]}
           grabCursor={true}
-          spaceBetween={0}
+          // spaceBetween={0}
           slidesPerView={4}
         //   initialSlide={5}
           // loopAdditionalSlides={}
@@ -114,12 +114,12 @@ const PlacementImageSlider = () => {
       alt={image.name} 
       className="w-full h-full object-cover" 
     />
-    <p className="absolute bottom-4  w-full text-left text-yellow-400  p-2">
+    {/* <p className="absolute bottom-4  w-full text-left text-yellow-400  p-2">
       {image.name}
     </p>
     <p className="absolute bottom-10  w-full text-left text-yellow-400  p-2">
         {image.Position}
-        </p>
+        </p> */}
   </SwiperSlide>
 ))}
 

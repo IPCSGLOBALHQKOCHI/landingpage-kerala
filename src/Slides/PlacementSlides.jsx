@@ -35,6 +35,12 @@ import image5 from "/assets/DSC03494.JPG";
         "Digital Marketing excutive",
       imageUrl: image5,
     },
+    {
+      name: "Anjana Prakash",
+      Position:
+        "Digital Marketing excutive",
+      imageUrl: image1,
+    },
   ];
 
 // export default slides

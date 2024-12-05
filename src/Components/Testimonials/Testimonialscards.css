@@ -1,0 +1,44 @@
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 2s ease; /* Slow, smooth transition over 2 seconds */
+    width: calc(100% * 5); /* Adjust for the total number of slides */
+  }
+  
+  .carousel-slide {
+    flex: 0 0 50%; /* Each slide takes up half the container's width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .carousel-slide img {
+    width: 200px;
+    height: 350px;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .carousel-slide h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .slanting {
+    transform: rotate(15deg); /* Slant the second image */
+    transition: transform 0.5s ease; /* Smooth rotation */
+  }
+  
