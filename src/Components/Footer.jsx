@@ -13,13 +13,12 @@ const Footer = () => {
         <div className="lg:w-1/3 text-gray-900 ml-8 ">
           <img src={Logo} alt="Logo" className="w-32 mb-7 mt-0" />
           <p className="text-left">
-  3rd floor, Rema Plaza, SS Kovil Rd, <br />
-  Overbridge, Santhi Nagar, <br />
-  Thampanoor, Thiruvananthapuram, <br />
-  Kerala 695001
-</p>
-
-          <div className="mt-4 grid grid-cols-2 gap-4">
+            Info@ipcsglobal.com <br />
+            +91 9846770771 <br />
+            www.ipcsglobal.com <br />
+          </p>
+<h5 className="mt-6 ml-24 font-semibold text-lg">Follow us</h5>
+          <div className="mt-2 grid grid-cols-2 gap-4">
             <a
               href="#"
               className="flex items-center space-x-2 text-gray-900 hover:text-gray-900"
@@ -97,7 +96,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="bg-[#E0FFF1] border-t py-4 text-center text-sm text-gray-900">
-        <div className="max-w-screen-xl mx-16 px-4 flex flex-wrap justify-between">
+        <div className="max-w-screen-xl mx-20 px-4 flex flex-wrap justify-between">
           <span>© IPCS Global</span>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-900">

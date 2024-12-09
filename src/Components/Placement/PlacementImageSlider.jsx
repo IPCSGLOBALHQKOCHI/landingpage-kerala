@@ -69,67 +69,44 @@
 
 // export default PlacementImageSlider;
 
-import React, { useRef,useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import gsap from "gsap";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { slides } from "../../Slides/PlacementSlides";
 import "./PlacementImageSlider.css";
 
 const PlacementImageSlider = () => {
-  const swipperWrapperRef = useRef(null);
   return (
-    // <main>
-    //   <div className="container mt-16">
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          grabCursor={true}
-          // spaceBetween={0}
-          slidesPerView={4}
-        //   initialSlide={5}
-          // loopAdditionalSlides={}
-          centeredSlides={true}
-          loop={true}
-          speed={1500}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-        
-          onSlideChange={(swiper) => {
-            const activeSlide = swiper.slides[swiper.activeIndex];
-            gsap.fromTo(
-              activeSlide,
-              { scale: 0 },
-              { scale: 1, duration: 0.2, ease: "elastic" }
-            );
-          }}
-        >
-         {slides.map((image, index) => (
-  <SwiperSlide key={index} className="relative">
-    <img 
-      src={image.imageUrl} 
-      alt={image.name} 
-      className="w-full h-full object-cover" 
-    />
-    {/* <p className="absolute bottom-4  w-full text-left text-yellow-400  p-2">
-      {image.name}
-    </p>
-    <p className="absolute bottom-10  w-full text-left text-yellow-400  p-2">
-        {image.Position}
-        </p> */}
-  </SwiperSlide>
-))}
-
-        </Swiper>
-    //   </div>
-    // </main>
+    <Swiper
+      modules={[Autoplay, Pagination]}
+      grabCursor={true}
+      slidesPerView="auto"
+      centeredSlides={true}
+      loop={true}
+      speed={1500}
+      spaceBetween={0} // No gap between slides
+      autoplay={{
+        delay: 1000,
+        disableOnInteraction: false,
+      }}
+    >
+      {slides.map((image, index) => (
+        <SwiperSlide key={index} className="relative">
+          <img
+            src={image.imageUrl}
+            alt={image.name}
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
 export default PlacementImageSlider;
+
 
 
 // import React from "react";

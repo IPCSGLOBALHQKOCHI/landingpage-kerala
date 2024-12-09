@@ -113,7 +113,7 @@
 
 // export default ImageSlider;
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -130,11 +130,29 @@ import image7 from "../../../src/assets/images/softwareTesting.png";
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imagesPerView, setImagesPerView] = useState(3); // Default to 3 for large screens
   const controls = useAnimation();
   const containerRef = useRef(null);
 
   const images = [image2, image3, image4, image5, image6, image7, image1];
-  const imagesPerView = 3; // Number of images visible at a time
+
+  // Update imagesPerView based on screen size
+  useEffect(() => {
+    const updateImagesPerView = () => {
+      if (window.innerWidth >= 1024) {
+        setImagesPerView(3); // Large screens (lg and above)
+      } else if(window,innerWidth >= 786 && window,innerWidth >= 640) {
+        setImagesPerView(2); // Small screens (sm and below)
+      }else{
+        setImagesPerView(1)
+      }
+    };
+
+    updateImagesPerView();
+    window.addEventListener("resize", updateImagesPerView);
+
+    return () => window.removeEventListener("resize", updateImagesPerView);
+  }, []);
 
   // Calculate the total slides
   const maxIndex = images.length - imagesPerView;
@@ -157,14 +175,15 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-100">
-      <div className="absolute top-0 left-0 right-0 z-10">
+    <div className="relative flex items-center justify-center h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px] overflow-hidden bg-gray-100">
+      <div className="absolute top-0 left-0 right-0 z-10 hidden sm:hidden md:hidden lg:block xl:block">
         <img
           src={BottomImage}
           alt="Top Image"
           className="w-full h-full object-cover rounded-md shadow-lg"
         />
       </div>
+
       {/* Sliding Images */}
       <motion.div
         ref={containerRef}
@@ -196,13 +215,12 @@ const ImageSlider = () => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-cover rounded-md shadow-lg"
+              className="w-full h-full object-fit rounded-md shadow-lg"
             />
             {/* Download Button */}
             <button
-              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-3 px-7 rounded-full shadow-lg"
+              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full shadow-lg"
               onClick={() => {
-                // Replace with actual file URL
                 const link = document.createElement("a");
                 link.href = `/path/to/brochure-${index + 1}.pdf`;
                 link.download = `brochure-${index + 1}.pdf`;
@@ -214,8 +232,8 @@ const ImageSlider = () => {
           </div>
         ))}
       </motion.div>
-
-      <div className="absolute bottom-0 left-0 right-0">
+ 
+      <div className="absolute bottom-0 left-0 right-0 hidden sm:hidden md:hidden lg:block xl:block">
         <img
           src={Topimage}
           alt="Bottom Image"
@@ -238,7 +256,7 @@ const ImageSlider = () => {
       </button>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-10 flex gap-2 ml-12 justify-center">
+      <div className="absolute bottom-6 flex gap-2 ml-12 justify-center">
         {Array.from({ length: maxIndex + 1 }).map((_, index) => (
           <button
             key={index}
@@ -254,4 +272,5 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
+
 

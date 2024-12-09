@@ -44,7 +44,7 @@ const VideoSlider = () => {
       </button>
 
       {/* Video Carousel */}
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full md:!w-5/12 flex justify-center  mr-0 sm:mr-80 md:mr-40 xl:ml-36 items-center">
         {videos.map((video, index) => (
           <motion.video
             key={index}

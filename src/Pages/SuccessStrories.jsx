@@ -3,7 +3,7 @@ import SuccessSlider from '../Components/Success/SuccessVideo'
 
 function SuccessStrories() {
   return (
-    <div className='w-full h-[820px] pt-16 bg-cover bg-center'
+    <div className='w-full h-[820px] pt-16 bg-cover bg-center hidden sm:hidden md:block lg:block xl:block'
      style={{
          background:
          "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",

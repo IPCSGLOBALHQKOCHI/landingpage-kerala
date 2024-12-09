@@ -37,73 +37,73 @@ function QuestionSection() {
     setRightOpenStates(newStates);
   };  
   return (
-    <div className=" py-10 px-5">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* Left Column */}
-        <div>
-          {leftQuestions.map((item, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg mt-4 ml-10 shadow-md">
-              <button
-                onClick={() => toggleLeftDropdown(index)}
-                className="flex justify-between items-center w-full text-left"
+    <div className="py-10 px-5">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Left Column */}
+      <div className="hidden sm:hidden md:block">
+        {leftQuestions.map((item, index) => (
+          <div key={index} className="bg-white p-4 rounded-lg mt-4 ml-10 shadow-md">
+            <button
+              onClick={() => toggleLeftDropdown(index)}
+              className="flex justify-between items-center w-full text-left"
+            >
+              <h3 className="text-lg font-semibold">{item.question}</h3>
+              <span
+                className={`text-xl transform transition-transform ${
+                  leftOpenStates[index] ? "rotate-180" : ""
+                }`}
               >
-                <h3 className="text-lg font-semibold">{item.question}</h3>
-                <span
-                  className={`text-xl transform transition-transform ${
-                    leftOpenStates[index] ? "rotate-180" : ""
-                  }`}
-                >
-                  <span className="inline-flex justify-center items-center">
-<img
-                 src={dropDown}
-                 alt="dropdown"
-                 className="w-[17px] h-[11px]"
-               />
-                  </span>
-                 
+                <span className="inline-flex justify-center items-center">
+                  <img
+                    src={dropDown}
+                    alt="dropdown"
+                    className="w-[17px] h-[11px]"
+                  />
                 </span>
-              </button>
-              {leftOpenStates[index] && (
-                <p className="mt-2 text-base text-gray-800 transition-all duration-300 ease-in-out">
-                  {item.answer}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Right Column */}
-        <div>
-          {rightQuestions.map((item, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg mt-4 mr-10 shadow-md">
-              <button
-                onClick={() => toggleRightDropdown(index)}
-                className="flex justify-between items-center w-full text-left"
+              </span>
+            </button>
+            {leftOpenStates[index] && (
+              <p className="mt-2 text-base text-gray-800 transition-all duration-300 ease-in-out">
+                {item.answer}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+  
+      {/* Right Column */}
+      <div className="block">
+        {rightQuestions.map((item, index) => (
+          <div key={index} className="bg-white p-4 rounded-lg mt-4 mr-10 shadow-md">
+            <button
+              onClick={() => toggleRightDropdown(index)}
+              className="flex justify-between items-center w-full text-left"
+            >
+              <h3 className="text-lg font-semibold">{item.question}</h3>
+              <span
+                className={`text-xl transform transition-transform ${
+                  rightOpenStates[index] ? "rotate-180" : ""
+                }`}
               >
-                <h3 className="text-lg font-semibold">{item.question}</h3>
-                <span
-                  className={`text-xl transform transition-transform ${
-                    rightOpenStates[index] ? "rotate-180" : ""
-                  }`}
-                >
-                   <span className="inline-flex justify-center items-center">
-<img
-                 src={dropDown}
-                 alt="dropdown"
-                 className="w-[17px] h-[11px]"/>
-                  </span>
+                <span className="inline-flex justify-center items-center">
+                  <img
+                    src={dropDown}
+                    alt="dropdown"
+                    className="w-[17px] h-[11px]"
+                  />
                 </span>
-              </button>
-              {rightOpenStates[index] && (
-                <p className="mt-2 text-base text-gray-800 transition-all duration-300 ease-in-out">
-                  {item.answer}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
+              </span>
+            </button>
+            {rightOpenStates[index] && (
+              <p className="mt-2 text-base text-gray-800 transition-all duration-300 ease-in-out">
+                {item.answer}
+              </p>
+            )}
+          </div>
+        ))}
       </div>
     </div>
+  </div>  
   );
 }
 
