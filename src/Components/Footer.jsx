@@ -4,58 +4,68 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
+import { IoIosMail } from "react-icons/io";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 const Footer = () => {
   return (
     <footer className="bg-[#E0FFF1] pt-10">
-      <div className="max-w-screen-xl mx-auto px-4 py-6 lg:flex lg:justify-between">
+      <div className="max-w-screen-xl mx-auto px-4 py-6 lg:flex lg:justify-between lg:items-start">
         {/* Left Section */}
-        <div className="lg:w-1/3 text-gray-900 ml-8 ">
-          <img src={Logo} alt="Logo" className="w-32 mb-7 mt-0" />
-          <p className="text-left">
-            Info@ipcsglobal.com <br />
-            +91 9846770771 <br />
-            www.ipcsglobal.com <br />
-          </p>
-<h5 className="mt-6 ml-24 font-semibold text-lg">Follow us</h5>
-          <div className="mt-2 grid grid-cols-2 gap-4">
+        <div className="lg:w-1/3 text-gray-900 mb-8 lg:mb-0 flex flex-col items-center lg:items-start lg:ml-8">
+          <img src={Logo} alt="Logo" className="w-32 mb-4 sm:mb-6" />
+          <p className="text-center lg:text-left mb-4 sm:mb-6 flex flex-col gap-2">
+            <span className="flex items-center gap-2">
+              <IoIosMail className="w-6 h-6" />
+              <span>Info@ipcsglobal.com</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <FaPhoneSquareAlt className="w-6 h-5" />
+              <span>+91 9846770771</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <AiOutlineGlobal className="w-6 h-6" />
+              <span>www.ipcsglobal.com</span>
+            </span>
+          </p> 
+          <h5 className="mt-4 font-semibold text-xl text-black text-center lg:text-left">
+            Follow us
+          </h5>
+          <div className="flex mt-2 gap-4 justify-center lg:justify-start flex-wrap">
             <a
               href="#"
-              className="flex items-center space-x-2 text-gray-900 hover:text-gray-900"
+              className="flex items-center text-gray-900 text-xl"
             >
-              <FaFacebook />
-              <span>Facebook</span>
+              <FaFacebook className="w-7 h-7" />
             </a>
             <a
               href="#"
-              className="flex items-center space-x-2 text-gray-900 hover:text-gray-900"
+              className="flex items-center text-gray-900 text-xl"
             >
-              <FaInstagram />
-              <span>Instagram</span>
+              <FaInstagram className="w-7 h-7" />
             </a>
             <a
               href="#"
-              className="flex items-center space-x-2 text-gray-900 hover:text-gray-900"
+              className="flex items-center text-gray-900  text-xl"
             >
-              <FaLinkedin />
-              <span>LinkedIn</span>
+              <FaLinkedin className="w-7 h-7" />
             </a>
             <a
               href="#"
-              className="flex items-center space-x-2 text-gray-900 hover:text-gray-900"
+              className="flex items-center text-gray-900 text-xl"
             >
-              <IoLogoYoutube />
-              <span>YouTube</span>
+              <IoLogoYoutube className="w-7 h-7" />
             </a>
           </div>
         </div>
 
         {/* Right Section */}
         <div className="lg:w-2/3">
-          <h4 className="text-xl font-semibold text-center  text-black mb-4">
+          <h4 className="text-xl font-semibold text-center lg:text-center text-black mb-4">
             Our Locations
           </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-center lg:text-left">
             {[
               { name: "Kochi", link: "/locations/kochi" },
               { name: "Calicut", link: "/locations/calicut" },
@@ -96,16 +106,16 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="bg-[#E0FFF1] border-t py-4 text-center text-sm text-gray-900">
-        <div className="max-w-screen-xl mx-20 px-4 flex flex-wrap justify-between">
+        <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <span>© IPCS Global</span>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-900">
+          <div className="flex flex-wrap space-x-4 mt-4 md:mt-0">
+            <a href="#" className="text-gray-900 hover:text-gray-700">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-900">
+            <a href="#" className="text-gray-900 hover:text-gray-700">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-900">
+            <a href="#" className="text-gray-900 hover:text-gray-700">
               Cookies Settings
             </a>
           </div>

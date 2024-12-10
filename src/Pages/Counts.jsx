@@ -12,7 +12,7 @@ function Counts() {
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
           src={GlobeImage}
-          className="w-16 h-16"
+          className="w-14 h-14"
           alt="Icon"
         />
       </div>
@@ -29,7 +29,7 @@ function Counts() {
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
           src={ProjectImage}
-          className="w-16 h-16"
+          className="w-14 h-14"
           alt="Icon"
         />
       </div>
@@ -46,7 +46,7 @@ function Counts() {
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
           src={ProfessionalImage}
-          className="w-16 h-16"
+          className="w-14 h-14"
           alt="Icon"
         />
       </div>
@@ -63,7 +63,7 @@ function Counts() {
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
           src={PartnersImage}
-          className="w-16 h-16"
+          className="w-14 h-14"
           alt="Icon"
         />
       </div>

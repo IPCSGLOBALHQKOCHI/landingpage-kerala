@@ -57,7 +57,7 @@ const IntroPage = () => {
             the World of Tech is Yours
           </h2>
 
-          <h4 className="absolute flex xl:text-left text-left sm:text-left md:text-left lg:text-left text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-normal text-white w-[280px] sm:w-[300px] md:w-[400px] lg:w-[530px] xl:w-[640px] mt-[250px] sm:mt-[278px] md:mt-[280px] lg:mt-[300px] xl:mt-[320px] ml-20 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24">
+          <h4 className="absolute justify-center  flex xl:text-left text-left sm:text-left md:text-left lg:text-left text-sm sm:text-base md:text-md lg:text-lg xl:text-xl font-normal text-white w-[280px] sm:w-[300px] md:w-[400px] lg:w-[530px] xl:w-[640px] mt-[250px] sm:mt-[278px] md:mt-[280px] lg:mt-[300px] xl:mt-[320px] ml-20 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24">
             Develop skills in Ai Integrated Digital Marketing, Industrial
             Automation, Software Testing, Python & Data Science, BMS & CCTV,
             Artificial Intelligence and Embedded & IoT with expert mentors for a

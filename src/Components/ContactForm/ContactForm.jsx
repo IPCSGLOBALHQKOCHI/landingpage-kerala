@@ -35,7 +35,7 @@ function ContactForm() {
     <div className="container mx-auto flex justify-center items-center p-4 sm:p-6">
       {/* Form container */}
       <div
-        className="text-white p-4 rounded-xl shadow-md w-full sm:w-[90%] lg:w-[520px] xl:w-[630px] relative py-3"
+        className="text-white p-4 rounded-xl shadow-md w-full sm:w-[90%] lg:w-[520px] xl:w-[630px] relative py-7"
         style={{
           background:
             "radial-gradient(circle, rgba(0,60,40,1) 0%, rgba(0,44,26,1) 60%, rgba(0,32,20,1) 100%)",

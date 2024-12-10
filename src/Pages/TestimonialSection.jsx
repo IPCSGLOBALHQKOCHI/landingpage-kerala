@@ -4,12 +4,12 @@ import CommaVector from "../../src/assets/vectors/Vector (5).png";
 
 const TestimonialSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row w-full h-auto my-10">
+    <div className="flex flex-col lg:flex-row w-full h-auto my-4">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 h-auto lg:h-[680px] flex flex-col items-center lg:items-start px-6 lg:pl-32 lg:pt-28">
         <img
           src={CommaVector}
-          className="w-[100px] h-[120px] lg:w-[140px] lg:h-[160px]"
+          className="w-[80px] h-[100px] lg:w-[120px] lg:h-[140px]"
           alt="Comma Icon"
         />
         <h1 className="text-center lg:text-left mt-4 lg:mt-6 text-2xl lg:text-4xl text-[#067D45] font-semibold">

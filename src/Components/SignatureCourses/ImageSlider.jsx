@@ -120,13 +120,58 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import BottomImage from "../../../src/assets/vectors/WHITE HALF CIRCLE 1 (1).png";
 import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
 
-import image1 from "../../../src/assets/images/Ai.png";
-import image2 from "../../../src/assets/images/AiandDM.png";
-import image3 from "../../../src/assets/images/BMSandCCTV.png";
-import image4 from "../../../src/assets/images/industrialAutomation.png";
-import image5 from "../../../src/assets/images/Iot.png";
-import image6 from "../../../src/assets/images/pythonandDS.png";
-import image7 from "../../../src/assets/images/softwareTesting.png";
+// import image1 from "../../../src/assets/images/Ai.png";
+// import image2 from "../../../src/assets/images/AiandDM.png";
+// import image3 from "../../../src/assets/images/BMSandCCTV.png";
+// import image4 from "../../../src/assets/images/industrialAutomation.png";
+// import image5 from "../../../src/assets/images/IoT.png";
+// import image6 from "../../../src/assets/images/pythonandDS.png";
+// import image7 from "../../../src/assets/images/softwareTesting.png";
+const cards = [
+  {
+    title1: "Software",
+    title2: "Testing",
+    description: "SELENIUM WEBDRIVER | JIRA |<br/> CI/CD INTEGRATION",
+    image: "../../../src/assets/images/softwareTesting.png",
+  },
+  {
+    title1: "Python and",
+    title2: "Data Science",
+    description: "PYTHON DATA SCIENCE | <br/> ANDROID APP DEVELOPMENT",
+    image: "../../../src/assets/images/pythonandDS.png",
+  },
+  {
+    title1: "BMS and ",
+    title2: "CCTV",
+    description:
+      "SECURITY SYSTEM | FIRE ALARM |<br/> ACCESS CONTROL SYSTEM | KERAS",
+    image: "../../../src/assets/images/BMSandCCTV.png",
+  },
+  {
+    title1: "Ai Integrated ",
+    title2: "Digital Marketing",
+    description: "SEO | SEM | SMM | SMO |<br/> AFFILIATE MARKETING",
+    image: "../../../src/assets/images/AiandDM.png",
+  },
+  {
+    title1: "Industrial ",
+    title2: "Automation",
+    description: "PLC | SCADA | DCS |<br/> CONTROL PANEL DESIGN",
+    image: "../../../src/assets/images/industrialAutomation.png",
+  },
+  {
+    title1: "Artificial ",
+    title2: "Intelligence ",
+    description: "TensorFlow | Keras",
+    image: "../../../src/assets/images/Ai.png",
+  },
+  {
+    title1: "Embedded ",
+    title2: "& IoT",
+    description: "PIC | ARM | Raspberry Pi | <br/> Arduino",
+    image: "../../../src/assets/images/IoT.png",
+  },
+];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -134,17 +179,17 @@ const ImageSlider = () => {
   const controls = useAnimation();
   const containerRef = useRef(null);
 
-  const images = [image2, image3, image4, image5, image6, image7, image1];
+  // const images = [image2, image3, image4, image5, image6, image7, image1];
 
   // Update imagesPerView based on screen size
   useEffect(() => {
     const updateImagesPerView = () => {
       if (window.innerWidth >= 1024) {
         setImagesPerView(3); // Large screens (lg and above)
-      } else if(window,innerWidth >= 786 && window,innerWidth >= 640) {
+      } else if ((window, innerWidth >= 786 && window, innerWidth >= 640)) {
         setImagesPerView(2); // Small screens (sm and below)
-      }else{
-        setImagesPerView(1)
+      } else {
+        setImagesPerView(1);
       }
     };
 
@@ -155,7 +200,7 @@ const ImageSlider = () => {
   }, []);
 
   // Calculate the total slides
-  const maxIndex = images.length - imagesPerView;
+  const maxIndex = cards.length - imagesPerView;
 
   const handleDotClick = (index) => {
     setCurrentIndex(index);
@@ -187,7 +232,7 @@ const ImageSlider = () => {
       {/* Sliding Images */}
       <motion.div
         ref={containerRef}
-        className="flex gap-4 cursor-grab active:cursor-grabbing"
+        className="flex gap-5 cursor-grab active:cursor-grabbing"
         drag="x"
         dragConstraints={{
           left: -(maxIndex * containerRef.current?.offsetWidth) || 0,
@@ -203,7 +248,7 @@ const ImageSlider = () => {
         transition={{ type: "spring", stiffness: 50 }}
         style={{ x: `-${currentIndex * (100 / imagesPerView)}%` }}
       >
-        {images.map((image, index) => (
+        {cards.map((image, index) => (
           <div
             key={index}
             className="relative flex-shrink-0"
@@ -212,14 +257,36 @@ const ImageSlider = () => {
               height: "600px",
             }}
           >
+            {/* Overlay container for title and description */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center mb-16 z-10">
+              <h1 className="text-4xl text-yellow-400 font-bold">{image.title1}</h1>
+              <h1 className="text-white text-4xl font-semibold mt-1">
+                {image.title2}
+              </h1>
+              <div className="absolute bottom-[252px] left-1/2 transform -translate-x-1/2 flex gap-2">
+                {Array.from({ length: 24 }).map((_, index) => (
+                  <button
+                    key={index}
+                    className="bg-yellow-400 w-1 h-1 rounded-full"
+                  />
+                ))}
+              </div>{" "}
+              <h5
+                className="text-white text-lg mt-4"
+                dangerouslySetInnerHTML={{ __html: image.description }}
+              ></h5>
+            </div>
+
+            {/* Image */}
             <img
-              src={image}
+              src={image.image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-fit rounded-md shadow-lg"
+              className="w-full h-full object-cover"
             />
+
             {/* Download Button */}
             <button
-              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full shadow-lg"
+              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full shadow-lg z-20"
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = `/path/to/brochure-${index + 1}.pdf`;
@@ -232,15 +299,13 @@ const ImageSlider = () => {
           </div>
         ))}
       </motion.div>
- 
-      <div className="absolute bottom-0 left-0 right-0 hidden sm:hidden md:hidden lg:block xl:block">
+      <div className="absolute bottom-0 left-0 right-0 z-10 hidden sm:hidden md:hidden lg:block xl:block">
         <img
           src={Topimage}
-          alt="Bottom Image"
+          alt="Top Image"
           className="w-full h-full object-cover rounded-md shadow-lg"
         />
       </div>
-
       {/* Navigation Arrows */}
       <button
         onClick={handlePrev}
@@ -256,7 +321,7 @@ const ImageSlider = () => {
       </button>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-6 flex gap-2 ml-12 justify-center">
+      {/* <div className="-bottom-4 gap-2 justify-center">
         {Array.from({ length: maxIndex + 1 }).map((_, index) => (
           <button
             key={index}
@@ -266,11 +331,9 @@ const ImageSlider = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default ImageSlider;
-
-

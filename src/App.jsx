@@ -13,9 +13,9 @@ function App() {
   return (
     <div className='w-screen h-screen overflow-x-hidden'>
 <IntroPage />
+<Contact/>
 <Counts/>
 <SignatureCourses/>
-<Contact/>
 <Placement/>
 <SuccessStrories/>
 <TestimonialSection/>

@@ -54,7 +54,7 @@ const VideoSlider = () => {
             animate={Object.keys(imageVariants)[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            style={{ width: "24%", position: "absolute",marginLeft:"720px",marginTop:"700px" }}
+            style={{ width: "22%",height:"540px", position: "absolute",marginLeft:"720px",marginTop:"700px" }}
             controls
             muted
           />
