@@ -21,7 +21,7 @@ const Footer = () => {
               <span>Info@ipcsglobal.com</span>
             </span>
             <span className="flex items-center gap-2">
-              <FaPhoneSquareAlt className="w-6 h-5" />
+              <FaPhoneSquareAlt className="w-6 h-6" />
               <span>+91 9846770771</span>
             </span>
             <span className="flex items-center gap-2">
@@ -34,25 +34,33 @@ const Footer = () => {
           </h5>
           <div className="flex mt-2 gap-4 justify-center lg:justify-start flex-wrap">
             <a
-              href="#"
+              href="https://www.facebook.com/ipcsglobal"
+               target="_blank"
+               rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <FaFacebook className="w-7 h-7" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/ipcs_global/"
+               target="_blank"
+               rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <FaInstagram className="w-7 h-7" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/ipcs-global/"
+               target="_blank"
+               rel="noopener noreferrer"
               className="flex items-center text-gray-900  text-xl"
             >
               <FaLinkedin className="w-7 h-7" />
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/c/IPCSAutomationPLCSCADABMSCCTVCADTraining"
+               target="_blank"
+               rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <IoLogoYoutube className="w-7 h-7" />
@@ -67,30 +75,30 @@ const Footer = () => {
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-center lg:text-left">
             {[
-              { name: "Kochi", link: "/locations/kochi" },
-              { name: "Calicut", link: "/locations/calicut" },
-              { name: "Trivandrum", link: "/locations/trivandrum" },
-              { name: "Attingal", link: "/locations/attingal" },
-              { name: "Kollam", link: "/locations/kollam" },
-              { name: "Kannur", link: "/locations/kannur" },
-              { name: "Thrissur", link: "/locations/thrissur" },
-              { name: "Perinthalmanna", link: "/locations/perinthalmanna" },
-              { name: "Kottayam", link: "/locations/kottayam" },
-              { name: "Pathanamthitta", link: "/locations/pathanamthitta" },
-              { name: "Palakkad", link: "/locations/palakkad" },
-              { name: "Dubai", link: "/locations/dubai" },
-              { name: "Riyadh", link: "/locations/riyadh" },
-              { name: "Chennai", link: "/locations/chennai" },
-              { name: "Tambaram", link: "/locations/tambaram" },
-              { name: "Trichy", link: "/locations/trichy" },
-              { name: "Madurai", link: "/locations/madurai" },
-              { name: "Hyderabad", link: "/locations/hyderabad" },
-              { name: "Erode", link: "/locations/erode" },
-              { name: "Tirunelveli", link: "/locations/tirunelveli" },
-              { name: "Bangalore", link: "/locations/bangalore" },
-              { name: "Mangalore", link: "/locations/mangalore" },
-              { name: "Ranchi", link: "/locations/ranchi" },
-              { name: "Raipur", link: "/locations/raipur" },
+              { name: "Kochi", link: "https://ipcsglobal.com/ipcs-global-kochi/" },
+              { name: "Calicut", link: "https://ipcsglobal.com/calicut-ipcs-global/" },
+              { name: "Trivandrum", link: "https://ipcsglobal.com/ipcs-global-trivandrum/" },
+              { name: "Attingal", link: "https://ipcsglobal.com/attingal-ipcs-global/" },
+              { name: "Kollam", link: "https://ipcsglobal.com/kollam-ipcs-global/" },
+              { name: "Kannur", link: "https://ipcsglobal.com/kannur-ipcs-global/" },
+              { name: "Thrissur", link: "https://ipcsglobal.com/thrissur-ipcs-global/" },
+              { name: "Perinthalmanna", link: "https://ipcsglobal.com/perinthalmanna/" },
+              { name: "Kottayam", link: "https://ipcsglobal.com/ipcs-global-kottayam/" },
+              { name: "Pathanamthitta", link: "https://ipcsglobal.com/ipcs-global-pathanamthitta/" },
+              { name: "Palakkad", link: "https://ipcsglobal.com/ipcs-global-palakkad/" },
+              { name: "Dubai", link: "https://ipcsglobal.com/dubai-ipcs-global/" },
+              { name: "Riyadh", link: "https://ipcsglobal.com/riyadh-ipcs-global/" },
+              { name: "Chennai", link: "https://ipcsglobal.com/chennai-ipcs-global/" },
+              { name: "Tambaram", link: "https://ipcsglobal.com/tambaram-ipcs-global/" },
+              { name: "Trichy", link: "https://ipcsglobal.com/trichy-ipcs-global/" },
+              { name: "Madurai", link: "https://ipcsglobal.com/madurai-ipcs-global/" },
+              { name: "Hyderabad", link: "https://ipcsglobal.com/hyderabad-ipcs-global/" },
+              { name: "Erode", link: "https://ipcsglobal.com/erode-ipcs-global/" },
+              { name: "Tirunelveli", link: "https://ipcsglobal.com/ipcs-global-tirunelveli/" },
+              { name: "Bangalore", link: "https://ipcsglobal.com/bangalore-ipcs-global/" },
+              { name: "Mangalore", link: "https://ipcsglobal.com/mangalore-ipcs-global/" },
+              { name: "Ranchi", link: "https://ipcsglobal.com/ipcs-global-ranchi/" },
+              { name: "Raipur", link: "https://ipcsglobal.com/ipcs-global-raipur/" },
             ].map((location, index) => (
               <a
                 key={index}
@@ -109,7 +117,7 @@ const Footer = () => {
         <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <span>© IPCS Global</span>
           <div className="flex flex-wrap space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-gray-900 hover:text-gray-700">
+            <a href="https://ipcsglobal.com/privacy-policy/" className="text-gray-900 hover:text-gray-700">
               Privacy Policy
             </a>
             <a href="#" className="text-gray-900 hover:text-gray-700">

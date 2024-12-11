@@ -84,9 +84,9 @@ const IntroPage = () => {
         </div>
 
         {/* Explore Courses Button */}
-        <button className="absolute flex items-center space-x-4 pr-2 rounded-full py-[5px] pl-10 bg-yellow-400 text-black font-semibold text-lg mt-[530px] sm:mt-[560px] md:mt-[650px] lg:mt-[590px] xl:mt-[610px] ml-24 xl:ml-24 md:ml-20 sm:ml-16 lg:ml-24">
-          <span>Explore Courses</span>
-          <div className="bg-white w-10 h-10 rounded-full">
+        <button className="absolute flex items-center space-x-4 pr-4 rounded-full py-[5px] pl-10 bg-yellow-400 text-black font-semibold text-lg mt-[530px] sm:mt-[560px] md:mt-[650px] lg:mt-[590px] xl:mt-[610px] ml-24 xl:ml-24 md:ml-20 sm:ml-16 lg:ml-24">
+          <span>Enroll Now</span>
+          <div className="bg-white w-9 h-9 rounded-full">
             <FiArrowRight className="w-7 h-7 ml-2 mt-1 text-green-900" />
           </div>
         </button>

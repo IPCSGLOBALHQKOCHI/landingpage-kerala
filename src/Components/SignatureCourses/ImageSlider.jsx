@@ -225,7 +225,7 @@ const ImageSlider = () => {
         <img
           src={BottomImage}
           alt="Top Image"
-          className="w-full h-full object-cover rounded-md shadow-lg"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
 
@@ -260,7 +260,7 @@ const ImageSlider = () => {
             {/* Overlay container for title and description */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center mb-16 z-10">
               <h1 className="text-4xl text-yellow-400 font-bold">{image.title1}</h1>
-              <h1 className="text-white text-4xl font-semibold mt-1">
+              <h1 className="text-white text-4xl font-semibold my-1">
                 {image.title2}
               </h1>
               <div className="absolute bottom-[252px] left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -272,7 +272,7 @@ const ImageSlider = () => {
                 ))}
               </div>{" "}
               <h5
-                className="text-white text-lg mt-4"
+                className="text-white text-lg mt-8"
                 dangerouslySetInnerHTML={{ __html: image.description }}
               ></h5>
             </div>
@@ -286,7 +286,7 @@ const ImageSlider = () => {
 
             {/* Download Button */}
             <button
-              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full shadow-lg z-20"
+              className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full z-20"
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = `/path/to/brochure-${index + 1}.pdf`;
@@ -294,7 +294,7 @@ const ImageSlider = () => {
                 link.click();
               }}
             >
-              Download Brochure
+              Download Syllabus
             </button>
           </div>
         ))}
@@ -303,35 +303,9 @@ const ImageSlider = () => {
         <img
           src={Topimage}
           alt="Top Image"
-          className="w-full h-full object-cover rounded-md shadow-lg"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
-      {/* Navigation Arrows */}
-      <button
-        onClick={handlePrev}
-        className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg"
-      >
-        <FaArrowLeft />
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg"
-      >
-        <FaArrowRight />
-      </button>
-
-      {/* Navigation Dots */}
-      {/* <div className="-bottom-4 gap-2 justify-center">
-        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-gray-800" : "bg-gray-400"
-            }`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

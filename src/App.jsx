@@ -8,10 +8,12 @@ import TestimonialSection from './Pages/TestimonialSection'
 import QuestionSection from './Pages/QuestionSection'
 import Contact from './Pages/Contact'
 import Footer from './Components/Footer'
+import StickOnContent from "./Components/StickOnContents"
 
 function App() {
   return (
     <div className='w-screen h-screen overflow-x-hidden'>
+      <StickOnContent/>
 <IntroPage />
 <Contact/>
 <Counts/>

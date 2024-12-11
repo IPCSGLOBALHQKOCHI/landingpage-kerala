@@ -8,14 +8,18 @@ import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1
 function ContactForm() {
   // Validation schema using Yup
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+    name: Yup.string()
+      .required("Name is required")
+      .matches(/^[A-Za-z\s]+$/, "Name must contain only letters"),
     mobileNumber: Yup.string()
       .matches(/^[0-9]+$/, "Must be a valid number")
-      .min(10, "Must be exactly 10 digits")
-      .max(10, "Must be exactly 10 digits")
+      .length(10, "Must be exactly 10 digits")
       .required("Mobile number is required"),
     email: Yup.string(),
-    course: Yup.string(),
+    location: Yup.string()
+      .required("Location is required"),
+    course: Yup.string()
+      .required("Course is required"),
   });
 
   // Initial form values
@@ -23,6 +27,7 @@ function ContactForm() {
     name: "",
     mobileNumber: "",
     email: "",
+    location: "",
     course: "",
   };
 
@@ -67,31 +72,75 @@ function ContactForm() {
                 />
               </div>
 
-              {/* Mobile Number field */}
-              <div>
-                <label
-                  htmlFor="mobileNumber"
-                  className="block text-sm sm:text-base"
-                >
-                  Mobile Number *
-                </label>
-                <div className="flex">
-                  <span className="flex items-center px-3 bg-gray-200 border text-black border-r-0 rounded-l">
-                    +91
-                  </span>
-                  <Field
-                    type="text"
-                    id="mobileNumber"
+              {/* Mobile Number and Location fields on the same line */}
+              <div className="flex flex-wrap sm:flex-nowrap sm:space-x-4 space-y-4 sm:space-y-0">
+                {/* Mobile Number field */}
+                <div className="w-full sm:w-1/2">
+                  <label
+                    htmlFor="mobileNumber"
+                    className="block text-sm sm:text-base"
+                  >
+                    Mobile Number *
+                  </label>
+                  <div className="flex">
+                    <span className="flex items-center px-3 bg-gray-200 border text-black border-r-0 rounded-l">
+                      +91
+                    </span>
+                    <Field
+                      type="text"
+                      id="mobileNumber"
+                      name="mobileNumber"
+                      placeholder="Enter your number"
+                      className="w-full px-4 py-2 bg-white text-black border rounded-r focus:outline-none"
+                    />
+                  </div>
+                  <ErrorMessage
                     name="mobileNumber"
-                    placeholder="Enter your number"
-                    className="w-full px-4 py-2 bg-white text-black border rounded-r focus:outline-none"
+                    component="div"
+                    className="text-red-500 text-sm"
                   />
                 </div>
-                <ErrorMessage
-                  name="mobileNumber"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
+
+                {/* Location field */}
+                <div className="w-full sm:w-1/2">
+                  <label
+                    htmlFor="location"
+                    className="block text-sm sm:text-base"
+                  >
+                    Select Location *
+                  </label>
+                  <div className="relative">
+                    <Field
+                      as="select"
+                      id="location"
+                      name="location"
+                      className="w-full px-4 py-2 rounded text-gray-500 focus:outline-none appearance-none"
+                    >
+                      <option value="" disabled>
+                        Select your location
+                      </option>
+                      <option value="Kochi">Kochi</option>
+                      <option value="Calicut">Calicut</option>
+                      <option value="Trivandrum">Trivandrum</option>
+                      <option value="Attingal">Attingal</option>
+                      <option value="Kollam">Kollam</option>
+                      <option value="Kannur">Kannur</option>
+                      <option value="Thrissur">Thrissur</option>
+                      <option value="Perinthalmana">Perinthalmana</option>
+                      <option value="Kottayam">Kottayam</option>
+                      <option value="Pathanimthitta">Pathanimthitta</option>
+                      <option value="Palakkad">Palakkad</option>
+                    </Field>
+                    <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
+                      <FaCaretDown />
+                    </span>
+                  </div>
+                  <ErrorMessage
+                    name="location"
+                    component="div"
+                    className="text-red-500 text-sm"
+                  />
+                </div>
               </div>
 
               {/* Email and Course fields on the same line */}
@@ -121,7 +170,7 @@ function ContactForm() {
                     htmlFor="course"
                     className="block text-sm sm:text-base"
                   >
-                    Select Course
+                    Select Course *
                   </label>
                   <div className="relative">
                     <Field
@@ -133,9 +182,14 @@ function ContactForm() {
                       <option value="" disabled>
                         Select your course
                       </option>
-                      <option value="engineering">Engineering</option>
-                      <option value="medical">Medical</option>
-                      <option value="law">Law</option>
+                      <option value="aianddm">Ai Integrated Digital Marketing</option>
+                      <option value="industrialautomation">Industrial Automation</option>
+                      <option value="softwaretesting">Software Testing</option>
+                      <option value="pythonDs">Python and Data Science</option>
+                      <option value="BMSCCTV">BMS & CCTV</option>
+                      <option value="Ai">Artificial Intelligence</option>
+                      <option value="embeddediot">Embedded & IoT</option>
+
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
                       <FaCaretDown />

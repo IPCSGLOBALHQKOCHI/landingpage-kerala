@@ -65,16 +65,15 @@
 
 // export default TestimonialsCards;
 
-
+import image from "../../../src/assets/images/irfan.png"
 import React, { useState, useEffect } from 'react';
 import './Testimonialscards.css';
 
 const cards = [
-  { image: "/assets/DSC03468.JPG", heading: "Digital marketing <br/> Excutive",name:"Dviya Rajesh" },
-  { image: "/assets/DSC03471.JPG", heading: "Digital marketing <br/> Excutive",name:"Annan"  },
-  { image: "/assets/DSC03483.JPG", heading: "Digital marketing <br/> Excutive",name:"Anzil P s"  },
-  { image: "/assets/DSC03488.JPG", heading: "Digital marketing <br/> Excutive",name:"Abhijith"  },
-  { image: "/assets/DSC03494.JPG", heading: "Digital marketing <br/> Excutive",name:"Abhiram"  },
+  { image: "../../../src/assets/images/irfan.png", heading: "Automation  <br/> Engineer",name:"Irfan I" },
+  { image: "../../../src/assets/images/mijin.png", heading: "Digital marketing <br/> Excutive",name:"Mijun Mathias"  },
+  { image: "../../../src/assets/images/subhajini.png", heading: "Software <br/> Engineer",name:"Dr.A.C. Subhajini"  },
+  { image: "../../../src/assets/images/visak.png", heading: "CCTV <br/> Technician",name:"Visakh S"  },
 ];
 
 const TestimonialsCards = () => {
@@ -95,13 +94,13 @@ const TestimonialsCards = () => {
 
   return (
 <div className="testimonial-container">
-  <div className="carousel-wrapper">
+  <div className="carousel-wrapper ">
     {visibleSlides.map((card, index) => (
       <div
         key={index}
         className={`carousel-slide ${index === 1 ? "slanting" : ""}`}
       >
-        <div className="rounded-lg flex flex-col items-center text-center"
+        <div className="rounded-3xl flex flex-col items-center text-center"
          style={{
           background: 'linear-gradient(to bottom, #008145 0%, #002916 100%)',
           padding: '20px',
