@@ -1,10 +1,10 @@
 import React from "react";
+import Swal from "sweetalert2";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FiArrowRight } from "react-icons/fi";
 import { FaCaretDown } from "react-icons/fa";
 import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1).png";
-
 function ContactForm() {
   // Validation schema using Yup
   const validationSchema = Yup.object({
@@ -32,8 +32,32 @@ function ContactForm() {
   };
 
   // Form submission handler
-  const onSubmit = (values) => {
-    console.log("Form data", values);
+  const handleClick = (values) => {
+    Swal.fire({
+      title: "<h2 class='text-3xl font-bold text-black'>You’re In!</h2>",
+      html: `
+        <p class='text-black mb-4 text-lg'>
+          We’ll contact you in just 20 minutes and deliver the Syllabus straight to your WhatsApp!!
+        </p>
+        <div class="flex justify-center space-x-4">
+          <img src="../../../src/assets/images/09.whatsapp.png" alt="Vector 1" class="w-12 h-12" />
+          <img src="../../../src/assets/images/call.png" alt="Vector 2" class="w-12 h-12" />
+          <img src="../../../src/assets/images/web.png" alt="Vector 3" class="w-12 h-12" />
+        </div>
+      `,
+      icon: "success",
+      iconColor: "#008145",
+      background: "#E0FFF1", 
+      showCloseButton: true, 
+      showConfirmButton: false,
+      customClass: {
+        popup: "rounded-xl px-6 py-6 relative", // Make popup relative for absolute positioning
+        closeButton: "absolute top-1 right-1 border hover:text-black border-black text-black rounded-full", // Position the close button
+      },
+    });
+    
+    
+    console.log("Form Data Submitted:", values);
   };
 
   return (
@@ -47,9 +71,13 @@ function ContactForm() {
         }}
       >
         <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={onSubmit}
+               initialValues={initialValues}
+               validationSchema={validationSchema}
+               onSubmit={(values, { setSubmitting, resetForm }) => {
+                 handleClick(values);
+                 resetForm(); // Clear the form values
+                 setSubmitting(false);
+               }}
         >
           {({ isSubmitting }) => (
             <Form className="space-y-6">

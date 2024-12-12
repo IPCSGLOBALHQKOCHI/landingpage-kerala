@@ -115,7 +115,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import BottomImage from "../../../src/assets/vectors/WHITE HALF CIRCLE 1 (1).png";
 import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
@@ -130,7 +130,7 @@ import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
 const cards = [
   {
     title1: "Software",
-    title2: "Testing",
+    title2: "Testing",  
     description: "SELENIUM WEBDRIVER | JIRA |<br/> CI/CD INTEGRATION",
     image: "../../../src/assets/images/softwareTesting.png",
   },
@@ -179,7 +179,6 @@ const ImageSlider = () => {
   const controls = useAnimation();
   const containerRef = useRef(null);
 
-  // const images = [image2, image3, image4, image5, image6, image7, image1];
 
   // Update imagesPerView based on screen size
   useEffect(() => {
@@ -285,14 +284,9 @@ const ImageSlider = () => {
             />
 
             {/* Download Button */}
-            <button
+            <button 
               className="absolute bottom-44 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-center font-medium py-2 px-4 rounded-full z-20"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = `/path/to/brochure-${index + 1}.pdf`;
-                link.download = `brochure-${index + 1}.pdf`;
-                link.click();
-              }}
+              onClick={() => document.getElementById("contactSection").scrollIntoView({ behavior: "smooth",block:"center" })}
             >
               Download Syllabus
             </button>

@@ -31,16 +31,16 @@ const VideoSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={handleNext}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full z-10 ml-[720px] mt-[350px]"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full z-10 ml-[750px] mt-[350px]"
       >
-        &#8592; {/* Left Arrow */}
+        {'<'} {/* Left Arrow */}
       </button>
 
       <button
         onClick={handleBack}
-        className="absolute right-7 top-1/2 transform -translate-y-1/2 text-white p-1 rounded-2xl z-10 mt-[350px]"
+        className="absolute right-7 top-1/2 transform -translate-y-1/2 text-white p-1 rounded-2xl z-10 mr-[45px] mt-[350px]"
       >
-        &#8594; {/* Right Arrow */}
+        {'>'}{/* Right Arrow */}
       </button>
 
       {/* Video Carousel */}

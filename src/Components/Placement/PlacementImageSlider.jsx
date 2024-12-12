@@ -82,11 +82,11 @@ const PlacementImageSlider = () => {
     <Swiper
       modules={[Autoplay, Pagination]}
       grabCursor={true}
-      slidesPerView="auto"
+      slidesPerView={5} // Slightly more than 6 images visible
       centeredSlides={true}
       loop={true}
       speed={1500}
-      spaceBetween={0} // No gap between slides
+      spaceBetween={-90}
       autoplay={{
         delay: 1000,
         disableOnInteraction: false,
@@ -106,6 +106,7 @@ const PlacementImageSlider = () => {
 };
 
 export default PlacementImageSlider;
+
 
 
 

@@ -6,7 +6,7 @@ import LogoVector from "../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 2 (2).p
 // import WhatsappLogo from "../../src/assets/images/whatsappLogo.png.png";
 function Contact() {
   return (
-    <div className="w-full h-auto mt-24 bg-white grid grid-rows-[auto_1fr_auto]">
+    <div id="contactSection" className="w-full h-auto mt-24 bg-white grid grid-rows-[auto_1fr_auto]">
       {/* Content Row */}
       <div className="flex flex-col lg:flex-row justify-start items-center lg:items-start">
         {/* Left Section with Green Gradient and JOIN NOW Text */}
