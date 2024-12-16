@@ -8,7 +8,10 @@
     margin-bottom: 30px;
     margin-top: 30px;
   }
-  
+  iframe {
+    overflow: hidden;
+    white-space: nowrap; /* Prevent horizontal scrolling */
+  }
   @media (max-width: 500px) {
     .swiper_container {
       height: 47rem;

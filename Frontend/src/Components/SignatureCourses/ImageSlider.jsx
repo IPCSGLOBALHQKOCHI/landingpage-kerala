@@ -1,118 +1,3 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import BottomImage from "/assets/WHITE HALF CIRCLE 1 (1).png";
-// import Topimage from "/assets/Half circle 2 1.png";
-// import TopVector from "/assets/Group 427319131.png"
-// import Bottomvector from "/assets/Group 427319132.png"
-// import CCTVImage from "/Images/white-security-camera-cctv-securtiy-camera 2.png"
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "./ImageSlider.css";
-
-// const cards = [
-//   {
-//     title1: "Software",
-//     title2: "Testing",
-//     description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-1.png",
-//   },
-//   {
-//     title1: "Python and",
-//     title2: "Data Science",
-//     description: "PYTHON.DATA SCIENCE | ANDROID APP DEVELOPMENT",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-2.png",
-//   },
-//   {
-//     title1: "BMS and ",
-//     title2: "CCTV",
-//     description: "SECURITY SYSTEM | FIRE ALARM | ACCESS CONTROL SYSTEM | KERAS",
-//     buttonText: "Download Brochure",
-//     image: {CCTVImage},
-//   },
-//   {
-//     title1: "Ai Integrated ",
-//     title2: "Digital Marketing",
-//     description: "SEO, SEM, SMM, SMO, AFFILIATE MARKETING",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-1.png",
-//   },
-//   {
-//     title1: "Industrial ",
-//     title2: "Automation",
-//     description: "PLC, SCADA, DCS, CONTROL PANEL DESIGN",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-2.png",
-//   },
-//   {
-//     title1: "Artificial ",
-//     title2: "Intelligence ",
-//     description: "TensorFlow, Keras",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-3.png",
-//   },
-//   {
-//     title1: "Embedded ",
-//     title2: "& IoT",
-//     description: "PIC, ARM, Raspberry Pi, and Arduino",
-//     buttonText: "Download Brochure",
-//     image: "/path-to-your-image-1.png",
-//   },
-// ];
-
-// const ImageSlider = () => {
-//   return (
-//     <div className="custom-swiper-container">
-//       {/* Top Image */}
-//       <div className="top-image-container">
-//         <img src={BottomImage} alt="Top Design" className="top-image" />
-//       </div>
-
-//       <Swiper
-//         slidesPerView={1}
-//         spaceBetween={110}
-//         loop={true}
-//         breakpoints={{
-//           640: { slidesPerView: 1 },
-//           768: { slidesPerView: 2 },
-//           1024: { slidesPerView: 3},
-//         }}
-//         centeredSlides={true}
-//         grabCursor={true}
-//         pagination={{ clickable: true }}
-//         className="swiper-wrapper"
-//       >
-//         {cards.map((card, index) => (
-//           <SwiperSlide key={index}>
-//             <div className="card">
-//               {/* <img src={TopVector} alt="topvector" className="top-vector" /> */}
-//               <div className="card-content">
-//                 <h2 className="card-title">
-//                   <span className="yellow-half">{card.title1}</span>
-//                   <span className="white-half">{card.title2}</span>
-//                 </h2>
-
-//                 <div className="divider"></div>
-//                 <p className="card-description">{card.description}</p>
-//                 <button className="card-button">{card.buttonText}</button>
-//               </div>
-//               {/* <img src={Bottomvector} alt="bottomvector" className="bottom-vector"/> */}
-//               {/* <img src={card.image} className="card-image" /> */}
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-
-//       {/* Bottom Image */}
-//       <div className="bottom-image-container">
-//         <img src={Topimage} alt="Bottom Design" className="bottom-image" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ImageSlider;
-
 import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 // import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -120,56 +5,56 @@ import { motion, useAnimation } from "framer-motion";
 import BottomImage from "../../../src/assets/vectors/WHITE HALF CIRCLE 1 (1).png";
 import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
 
-// import image1 from "../../../src/assets/images/Ai.png";
-// import image2 from "../../../src/assets/images/AiandDM.png";
-// import image3 from "../../../src/assets/images/BMSandCCTV.png";
-// import image4 from "../../../src/assets/images/industrialAutomation.png";
-// import image5 from "../../../src/assets/images/IoT.png";
-// import image6 from "../../../src/assets/images/pythonandDS.png";
-// import image7 from "../../../src/assets/images/softwareTesting.png";
+import image1 from "../../../src/assets/images/softwareTesting.png";
+import image2 from "../../../src/assets/images/pythonandDS.png";
+import image3 from "../../../src/assets/images/BMSandCCTV.png";
+import image4 from "../../../src/assets/images/AiandDM.png";
+import image5 from "../../../src/assets/images/industrialAutomation.png";
+import image6 from "../../../src/assets/images/Ai.png";
+import image7 from "../../../src/assets/images/IoT.png";
 const cards = [
   {
     title1: "Software",
     title2: "Testing",  
     description: "SELENIUM WEBDRIVER | JIRA |<br/> CI/CD INTEGRATION",
-    image: "../../../src/assets/images/softwareTesting.png",
+    image: image1,
   },
   {
     title1: "Python and",
     title2: "Data Science",
     description: "PYTHON DATA SCIENCE | <br/> ANDROID APP DEVELOPMENT",
-    image: "../../../src/assets/images/pythonandDS.png",
+    image: image2,
   },
   {
     title1: "BMS and ",
     title2: "CCTV",
     description:
       "SECURITY SYSTEM | FIRE ALARM |<br/> ACCESS CONTROL SYSTEM | KERAS",
-    image: "../../../src/assets/images/BMSandCCTV.png",
+    image: image3,
   },
   {
     title1: "Ai Integrated ",
     title2: "Digital Marketing",
     description: "SEO | SEM | SMM | SMO |<br/> AFFILIATE MARKETING",
-    image: "../../../src/assets/images/AiandDM.png",
+    image: image4,
   },
   {
     title1: "Industrial ",
     title2: "Automation",
     description: "PLC | SCADA | DCS |<br/> CONTROL PANEL DESIGN",
-    image: "../../../src/assets/images/industrialAutomation.png",
+    image:image5,
   },
   {
     title1: "Artificial ",
     title2: "Intelligence ",
     description: "TensorFlow | Keras",
-    image: "../../../src/assets/images/Ai.png",
+    image: image6,
   },
   {
     title1: "Embedded ",
     title2: "& IoT",
     description: "PIC | ARM | Raspberry Pi | <br/> Arduino",
-    image: "../../../src/assets/images/IoT.png",
+    image:image7,
   },
 ];
 

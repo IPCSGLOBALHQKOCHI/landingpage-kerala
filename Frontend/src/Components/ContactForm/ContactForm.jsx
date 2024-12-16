@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import axios from "axios"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FiArrowRight } from "react-icons/fi";
@@ -32,32 +33,66 @@ function ContactForm() {
   };
 
   // Form submission handler
-  const handleClick = (values) => {
-    Swal.fire({
-      title: "<h2 class='text-3xl font-bold text-black'>You’re In!</h2>",
-      html: `
-        <p class='text-black mb-4 text-lg'>
-          We’ll contact you in just 20 minutes and deliver the Syllabus straight to your WhatsApp!!
-        </p>
-        <div class="flex justify-center space-x-4">
-          <img src="../../../src/assets/images/09.whatsapp.png" alt="Vector 1" class="w-12 h-12" />
-          <img src="../../../src/assets/images/call.png" alt="Vector 2" class="w-12 h-12" />
-          <img src="../../../src/assets/images/web.png" alt="Vector 3" class="w-12 h-12" />
-        </div>
-      `,
-      icon: "success",
-      iconColor: "#008145",
-      background: "#E0FFF1", 
-      showCloseButton: true, 
-      showConfirmButton: false,
-      customClass: {
-        popup: "rounded-xl px-6 py-6 relative", // Make popup relative for absolute positioning
-        closeButton: "absolute top-1 right-1 border hover:text-black border-black text-black rounded-full", // Position the close button
-      },
-    });
+  const handleClick = async (values) => {
+    try {
+      const currentDate = new Date();
+      const timestamp = currentDate.toLocaleString('en-US', {
+        month: '2-digit',
+        day: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      }) 
+       const updatedValues = {
+      ...values,
+      timestamp,
+    };
+    console.log(updatedValues);
     
-    
-    console.log("Form Data Submitted:", values);
+      const response = await axios.post("http://localhost:5000/api/submitform", updatedValues, {
+        headers: {
+          "Content-Type": "application/json",
+        }})
+      if (response.status === 200) {
+        Swal.fire({
+          title: "<h2 class='text-3xl font-bold text-black'>You’re In!</h2>",
+          html: `
+            <p class='text-black mb-4 text-lg'>
+              We’ll contact you in just 20 minutes and deliver the Syllabus straight to your WhatsApp!!
+            </p>
+            <div class="flex justify-center space-x-4">
+              <img src="../../../src/assets/images/09.whatsapp.png" alt="Vector 1" class="w-12 h-12" />
+              <img src="../../../src/assets/images/call.png" alt="Vector 2" class="w-12 h-12" />
+              <img src="../../../src/assets/images/web.png" alt="Vector 3" class="w-12 h-12" />
+            </div>
+          `,
+          icon: "success",
+          iconColor: "#008145",
+          background: "#E0FFF1",
+          showCloseButton: true,
+          showConfirmButton: false,
+          customClass: {
+            popup: "rounded-xl px-6 py-6 relative",
+            closeButton: "absolute top-1 right-1 border hover:text-black border-black text-black rounded-full",
+          },
+        });
+      } else {
+        throw new Error("Failed to send form details");
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Submission Failed",
+        text: "An error occurred while submitting your form. Please try again.",
+        icon: "error",
+        background: "#E0FFF1",
+        confirmButtonText: "Close",
+        customClass: {
+          popup: "rounded-xl px-6 py-6 relative",
+        },
+      });
+      console.error("Error details:", error.response || error.message || error);
+    }
   };
 
   return (
@@ -70,15 +105,15 @@ function ContactForm() {
             "radial-gradient(circle, rgba(0,60,40,1) 0%, rgba(0,44,26,1) 60%, rgba(0,32,20,1) 100%)",
         }}
       >
-        <Formik
-               initialValues={initialValues}
-               validationSchema={validationSchema}
-               onSubmit={(values, { setSubmitting, resetForm }) => {
-                 handleClick(values);
-                 resetForm(); // Clear the form values
-                 setSubmitting(false);
-               }}
-        >
+              <Formik
+              initialValues={initialValues}
+              validationSchema={validationSchema}
+              onSubmit={(values, { setSubmitting, resetForm }) => {
+                handleClick(values);
+                resetForm();
+                setSubmitting(false);
+              }}
+            >
           {({ isSubmitting }) => (
             <Form className="space-y-6">
               {/* Name field */}
@@ -210,13 +245,13 @@ function ContactForm() {
                       <option value="" disabled>
                         Select your course
                       </option>
-                      <option value="aianddm">Ai Integrated Digital Marketing</option>
-                      <option value="industrialautomation">Industrial Automation</option>
-                      <option value="softwaretesting">Software Testing</option>
-                      <option value="pythonDs">Python and Data Science</option>
-                      <option value="BMSCCTV">BMS & CCTV</option>
+                      <option value="Ai and DM">Ai Integrated Digital Marketing</option>
+                      <option value="Industrial Automation">Industrial Automation</option>
+                      <option value="Software Testing">Software Testing</option>
+                      <option value="Python and DataScience">Python and Data Science</option>
+                      <option value="BMS and CCTV">BMS & CCTV</option>
                       <option value="Ai">Artificial Intelligence</option>
-                      <option value="embeddediot">Embedded & IoT</option>
+                      <option value="Embedded and IOT">Embedded & IoT</option>
 
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">

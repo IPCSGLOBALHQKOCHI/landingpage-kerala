@@ -1,4 +1,4 @@
-import React, { Fragment,useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -11,38 +11,26 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const slides = [
   {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "https://www.instagram.com/reel/DCB3QsjCr-O/embed",
   },
   {
-    video: "../../src/assets/videos/Ruksana Testimonial for Web.mp4",
+    video: "https://www.instagram.com/reel/DC7AH-azDgs/embed",
   },
   {
-    video: "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4",
+    video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
   },
   {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
+    video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
   },
   {
-    video: "../../src/assets/videos/Ruksana Testimonial for Web.mp4",
+    video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
   },
   {
-    video: "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4",
+    video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
   },
   {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
-  },
-  {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
-  },
-  {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
-  },
-  {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
-  },
-  {
-    video: "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4",
-  },
+    video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
+  }
 ];
 
 const SuccessSlider = () => {
@@ -63,7 +51,7 @@ const SuccessSlider = () => {
           depth: 100,
           modifier: 1,
         }}
-        spaceBetween={140}
+        spaceBetween={120}
         //       pagination={{
         //   clickable: true, // Make dots clickable
         //   type: "bullets", // Use bullets (dots)
@@ -76,15 +64,18 @@ const SuccessSlider = () => {
       >
         {slides.map(({ video }, index) => (
           <Fragment key={index}>
-            <SwiperSlide className="flex flex-col gap-10 rounded-2xl justify-center text-center min-h-[450px] md:min-h-[500px]">
-              <video
-                src={video}
-                // autoPlay
-                // controls
-                className={`w-[18rem] h-[26rem] rounded-xl ${
+            <SwiperSlide className="flex flex-col gap-10 rounded-2xl justify-center text-center min-h-[450px] md:min-h-[650px]">
+              <iframe
+                src={`${video}`} // Use embeddable URL
+                className={`w-auto h-[600px] rounded-xl ${
                   isDragging ? "pointer-events-none" : "pointer-events-auto"
                 }`}
-              />
+                frameBorder="0"
+                overflow="false"
+                allow="autoplay; fullscreen"
+                scrolling="no"
+                title={`Instagram Video ${index + 1}`}
+              ></iframe>
             </SwiperSlide>
           </Fragment>
         ))}
