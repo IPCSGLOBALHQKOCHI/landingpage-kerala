@@ -20,16 +20,26 @@ const slides = [
     video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
   },
   {
+    video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
+  }
+  ,
+  {
+    video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
+  },
+  {
+    video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
+  },
+  {
+    video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
+  },
+  {
     video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
   },
   {
     video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
   },
   {
-    video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
+    video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
   }
 ];
 
@@ -64,7 +74,7 @@ const SuccessSlider = () => {
       >
         {slides.map(({ video }, index) => (
           <Fragment key={index}>
-            <SwiperSlide className="flex flex-col gap-10 rounded-2xl justify-center text-center min-h-[450px] md:min-h-[650px]">
+            <SwiperSlide className="flex flex-col gap-5 rounded-2xl justify-center text-center min-h-[450px] md:min-h-[650px]">
               <iframe
                 src={`${video}`} // Use embeddable URL
                 className={`w-auto h-[600px] rounded-xl ${

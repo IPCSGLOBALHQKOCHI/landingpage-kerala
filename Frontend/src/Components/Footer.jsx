@@ -26,41 +26,48 @@ const Footer = () => {
             </span>
             <span className="flex items-center gap-2">
               <AiOutlineGlobal className="w-6 h-6" />
-              <span>www.ipcsglobal.com</span>
+              <a
+                href="https://www.ipcsglobal.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                www.ipcsglobal.com
+              </a>
             </span>
-          </p> 
+          </p>
           <h5 className="mt-4 font-semibold text-xl text-black text-center lg:text-left">
             Follow us
           </h5>
           <div className="flex mt-2 gap-4 justify-center lg:justify-start flex-wrap">
             <a
               href="https://www.facebook.com/ipcsglobal"
-               target="_blank"
-               rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <FaFacebook className="w-7 h-7" />
             </a>
             <a
               href="https://www.instagram.com/ipcs_global/"
-               target="_blank"
-               rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <FaInstagram className="w-7 h-7" />
             </a>
             <a
               href="https://www.linkedin.com/in/ipcs-global/"
-               target="_blank"
-               rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-gray-900  text-xl"
             >
               <FaLinkedin className="w-7 h-7" />
             </a>
             <a
               href="https://www.youtube.com/c/IPCSAutomationPLCSCADABMSCCTVCADTraining"
-               target="_blank"
-               rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
             >
               <IoLogoYoutube className="w-7 h-7" />
@@ -75,30 +82,102 @@ const Footer = () => {
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-center lg:text-left">
             {[
-              { name: "Kochi", link: "https://ipcsglobal.com/ipcs-global-kochi/" },
-              { name: "Calicut", link: "https://ipcsglobal.com/calicut-ipcs-global/" },
-              { name: "Trivandrum", link: "https://ipcsglobal.com/ipcs-global-trivandrum/" },
-              { name: "Attingal", link: "https://ipcsglobal.com/attingal-ipcs-global/" },
-              { name: "Kollam", link: "https://ipcsglobal.com/kollam-ipcs-global/" },
-              { name: "Kannur", link: "https://ipcsglobal.com/kannur-ipcs-global/" },
-              { name: "Thrissur", link: "https://ipcsglobal.com/thrissur-ipcs-global/" },
-              { name: "Perinthalmanna", link: "https://ipcsglobal.com/perinthalmanna/" },
-              { name: "Kottayam", link: "https://ipcsglobal.com/ipcs-global-kottayam/" },
-              { name: "Pathanamthitta", link: "https://ipcsglobal.com/ipcs-global-pathanamthitta/" },
-              { name: "Palakkad", link: "https://ipcsglobal.com/ipcs-global-palakkad/" },
-              { name: "Dubai", link: "https://ipcsglobal.com/dubai-ipcs-global/" },
-              { name: "Riyadh", link: "https://ipcsglobal.com/riyadh-ipcs-global/" },
-              { name: "Chennai", link: "https://ipcsglobal.com/chennai-ipcs-global/" },
-              { name: "Tambaram", link: "https://ipcsglobal.com/tambaram-ipcs-global/" },
-              { name: "Trichy", link: "https://ipcsglobal.com/trichy-ipcs-global/" },
-              { name: "Madurai", link: "https://ipcsglobal.com/madurai-ipcs-global/" },
-              { name: "Hyderabad", link: "https://ipcsglobal.com/hyderabad-ipcs-global/" },
-              { name: "Erode", link: "https://ipcsglobal.com/erode-ipcs-global/" },
-              { name: "Tirunelveli", link: "https://ipcsglobal.com/ipcs-global-tirunelveli/" },
-              { name: "Bangalore", link: "https://ipcsglobal.com/bangalore-ipcs-global/" },
-              { name: "Mangalore", link: "https://ipcsglobal.com/mangalore-ipcs-global/" },
-              { name: "Ranchi", link: "https://ipcsglobal.com/ipcs-global-ranchi/" },
-              { name: "Raipur", link: "https://ipcsglobal.com/ipcs-global-raipur/" },
+              {
+                name: "Kochi",
+                link: "https://ipcsglobal.com/ipcs-global-kochi/",
+              },
+              {
+                name: "Calicut",
+                link: "https://ipcsglobal.com/calicut-ipcs-global/",
+              },
+              {
+                name: "Trivandrum",
+                link: "https://ipcsglobal.com/ipcs-global-trivandrum/",
+              },
+              {
+                name: "Attingal",
+                link: "https://ipcsglobal.com/attingal-ipcs-global/",
+              },
+              {
+                name: "Kollam",
+                link: "https://ipcsglobal.com/kollam-ipcs-global/",
+              },
+              {
+                name: "Kannur",
+                link: "https://ipcsglobal.com/kannur-ipcs-global/",
+              },
+              {
+                name: "Thrissur",
+                link: "https://ipcsglobal.com/thrissur-ipcs-global/",
+              },
+              {
+                name: "Perinthalmanna",
+                link: "https://ipcsglobal.com/perinthalmanna/",
+              },
+              {
+                name: "Kottayam",
+                link: "https://ipcsglobal.com/ipcs-global-kottayam/",
+              },
+              {
+                name: "Pathanamthitta",
+                link: "https://ipcsglobal.com/ipcs-global-pathanamthitta/",
+              },
+              {
+                name: "Palakkad",
+                link: "https://ipcsglobal.com/ipcs-global-palakkad/",
+              },
+              {
+                name: "Dubai",
+                link: "https://ipcsglobal.com/dubai-ipcs-global/",
+              },
+              {
+                name: "Riyadh",
+                link: "https://ipcsglobal.com/riyadh-ipcs-global/",
+              },
+              {
+                name: "Chennai",
+                link: "https://ipcsglobal.com/chennai-ipcs-global/",
+              },
+              {
+                name: "Tambaram",
+                link: "https://ipcsglobal.com/tambaram-ipcs-global/",
+              },
+              {
+                name: "Trichy",
+                link: "https://ipcsglobal.com/trichy-ipcs-global/",
+              },
+              {
+                name: "Madurai",
+                link: "https://ipcsglobal.com/madurai-ipcs-global/",
+              },
+              {
+                name: "Hyderabad",
+                link: "https://ipcsglobal.com/hyderabad-ipcs-global/",
+              },
+              {
+                name: "Erode",
+                link: "https://ipcsglobal.com/erode-ipcs-global/",
+              },
+              {
+                name: "Tirunelveli",
+                link: "https://ipcsglobal.com/ipcs-global-tirunelveli/",
+              },
+              {
+                name: "Bangalore",
+                link: "https://ipcsglobal.com/bangalore-ipcs-global/",
+              },
+              {
+                name: "Mangalore",
+                link: "https://ipcsglobal.com/mangalore-ipcs-global/",
+              },
+              {
+                name: "Ranchi",
+                link: "https://ipcsglobal.com/ipcs-global-ranchi/",
+              },
+              {
+                name: "Raipur",
+                link: "https://ipcsglobal.com/ipcs-global-raipur/",
+              },
             ].map((location, index) => (
               <a
                 key={index}

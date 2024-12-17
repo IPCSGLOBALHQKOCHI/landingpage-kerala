@@ -5,7 +5,7 @@ const StickOnContents = () => {
   return (
     <div className="fixed bottom-14 right-8 flex flex-col space-y-4 z-50">
            <a
-        href="tel:yourphonenumber"
+        href="tel:+91 98467 70771"
         className="w-[52px] h-[52px] rounded-full flex items-center justify-center"
       >
         <img src={CallIcon} />

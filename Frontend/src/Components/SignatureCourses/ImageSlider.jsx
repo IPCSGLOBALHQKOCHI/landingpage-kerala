@@ -84,12 +84,12 @@ const ImageSlider = () => {
   }, []);
 
   // Calculate the total slides
-  const maxIndex = cards.length - imagesPerView;
+  const maxIndex = Math.max(0, cards.length - imagesPerView);
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-    controls.start({ x: `-${index * (100 / imagesPerView)}%` });
-  };
+  // const handleDotClick = (index) => {
+  //   setCurrentIndex(index);
+  //   controls.start({ x: `-${index * (100 / imagesPerView)}%` });
+  // };
 
   const handleNext = () => {
     const nextIndex = Math.min(currentIndex + 1, maxIndex);
@@ -119,10 +119,14 @@ const ImageSlider = () => {
         className="flex gap-5 cursor-grab active:cursor-grabbing"
         drag="x"
         dragConstraints={{
-          left: -(maxIndex * containerRef.current?.offsetWidth) || 0,
-          right: 0,
+          left:
+      containerRef.current
+        ? -(cards.length * (containerRef.current.offsetWidth / imagesPerView) -
+            containerRef.current.offsetWidth) - 120 // Add 50px space after the last image
+        : 0,
+    right: 0,
         }}
-        dragElastic={0.1}
+        dragElastic={0.2}
         onDragEnd={(event, info) => {
           if (info.offset.x < -50 && currentIndex < maxIndex)
             handleNext(); // Swipe left
