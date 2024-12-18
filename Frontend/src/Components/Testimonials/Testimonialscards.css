@@ -50,5 +50,53 @@
     color: gold; /* Yellow color */
     margin-right: 5px;
   }
+  @media (min-width: 400px) {
+    .carousel-slide {
+      flex: 0 0 100%; /* Two slides per view on medium screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 190px;
+    }
+  
+    .star {
+      font-size: 22px;
+    }
+  }
+
+  /* Medium screens (e.g., tablets) */
+  @media (min-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 60%; /* Two slides per view on medium screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 220px;
+    }
+  
+    .star {
+      font-size: 22px;
+    }
+  }
+  
+  /* Large screens (e.g., desktops) */
+  @media (min-width: 1024px) {
+    .carousel-slide {
+      flex: 0 0 33.33%; /* Three slides per view on large screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 250px;
+    }
+  
+    .star {
+      font-size: 24px;
+    }
+  
+    .slanting {
+      margin-top: 40px;
+      margin-left: 25px;
+    }
+  }
   
   

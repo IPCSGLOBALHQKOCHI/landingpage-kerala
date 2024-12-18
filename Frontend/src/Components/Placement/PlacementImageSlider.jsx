@@ -91,14 +91,14 @@ const PlacementImageSlider = () => {
         delay: 1000,
         disableOnInteraction: false,
       }}
-    >
+      >
       {slides.map((image, index) => (
         <SwiperSlide key={index} className="relative">
           <img
             src={image.imageUrl}
             alt={image.name}
             className="w-full h-full object-cover rounded-lg"
-          />
+            />
         </SwiperSlide>
       ))}
     </Swiper>

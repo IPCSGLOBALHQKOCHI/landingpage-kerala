@@ -104,12 +104,12 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px] overflow-hidden bg-gray-100">
+    <div className="relative flex items-center justify-center h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px] overflow-hidden">
       <div className="absolute top-0 left-0 right-0 z-10 hidden sm:hidden md:hidden lg:block xl:block">
         <img
           src={BottomImage}
           alt="Top Image"
-          className="w-full h-full object-cover rounded-md"
+          className="w-full h-full object-cover rounded-md hidden sm:hidden md:hidden lg:hidden xl:block"
         />
       </div>
 
