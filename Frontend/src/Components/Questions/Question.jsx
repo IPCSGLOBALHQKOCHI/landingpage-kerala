@@ -37,12 +37,12 @@ function QuestionSection() {
     setRightOpenStates(newStates);
   };  
   return (
-    <div className="py-10 px-5">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="py-10 px-0">
+    <div className="max-w-7xl mx-auto grid items-center grid-cols-1 md:grid-cols-2 gap-6">
       {/* Left Column */}
       <div className="hidden sm:hidden md:block">
         {leftQuestions.map((item, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg mt-4 ml-10 shadow-md">
+          <div key={index} className="bg-white p-4 rounded-lg mt-4 ml-4 shadow-md">
             <button
               onClick={() => toggleLeftDropdown(index)}
               className="flex justify-between items-center w-full text-left"
@@ -74,7 +74,7 @@ function QuestionSection() {
       {/* Right Column */}
       <div className="block">
         {rightQuestions.map((item, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg mt-4 mr-10 shadow-md">
+          <div key={index} className="bg-white text-center items-center p-4 rounded-lg mt-4 mr-5 shadow-md">
             <button
               onClick={() => toggleRightDropdown(index)}
               className="flex justify-between items-center w-full text-left"

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import video1 from "../../src/assets/videos/Ruksana Testimonial for Web.mp4";
 import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
-import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
-
+// import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
+import video3 from "../../src/assets/videos/Levy Sandra Testimonial v2_1.mp4"
 const VideoSlider = () => {
   const videos = [video1, video2, video3];
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);

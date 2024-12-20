@@ -53,7 +53,7 @@ const slides = [
 
 const SuccessSlider = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-0">
       <Swiper
         effect={"coverflow"}
         centeredSlides={true}

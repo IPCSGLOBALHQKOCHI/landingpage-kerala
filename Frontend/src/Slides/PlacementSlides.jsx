@@ -1,9 +1,9 @@
-import image1 from "/assets/DSC03468.JPG";
-import image2 from "/assets/DSC03471.JPG";
-import image3 from "/assets/DSC03483.JPG";
-import image4 from "/assets/DSC03488.JPG";
-import image5 from "/assets/DSC03494.JPG";
-
+import image1 from "../assets/images/Group 427319157.png";
+import image2 from "../assets/images/Group 427319158.png";
+import image3 from "../assets/images/Group 427319159.png";
+import image4 from "../assets/images/Group 427319160.png";
+import image5 from "../assets/images/Group 427319161.png";
+import image6 from "../assets/images/Group 427319162.png"
  export const slides = [
     {
       name: "Anjana Prakash",
@@ -39,8 +39,8 @@ import image5 from "/assets/DSC03494.JPG";
       name: "Anjana Prakash",
       Position:
         "Digital Marketing excutive",
-      imageUrl: image1,
-    },
+      imageUrl: image6,
+    }
   ];
 
 // export default slides

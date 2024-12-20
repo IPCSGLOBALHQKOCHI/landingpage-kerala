@@ -79,6 +79,8 @@ import "./PlacementImageSlider.css";
 
 const PlacementImageSlider = () => {
   return (
+    <div className="hidden md:block">
+
     <Swiper
       modules={[Autoplay, Pagination]}
       grabCursor={true}
@@ -102,6 +104,7 @@ const PlacementImageSlider = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+      </div>
   );
 };
 

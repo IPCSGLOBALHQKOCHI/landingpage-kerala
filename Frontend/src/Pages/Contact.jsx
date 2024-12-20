@@ -62,18 +62,18 @@ function Contact() {
 
       {/* Button Centered Below */}
       <div className="flex justify-center mt-4 lg:mt-12 mb-6 lg:mb-12">
-        <button className="flex items-center border-2 border-[#014F2A] text-green-600 px-2 lg:px-4 py-2 lg:py-2 rounded-xl">
-          {/* <img
-            src={WhatsappLogo}
-            alt="whtsapplogo"
-            className="pr-2 lg:pr-1 w-9 h-9 lg:w-8"
-          /> */}
-          <IoLogoWhatsapp className="h-9 w-9 pr-2"/>
-          <span className="text-lg lg:text-2xl font-medium text-[#026336]">
-            Get Free Admission Counselling
-          </span>
-        </button>
-      </div>
+  <a
+    href="https://wa.me/message/2JUOJKIQBVEUD1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center border-2 border-[#014F2A] text-green-600 px-2 lg:px-4 py-2 lg:py-2 rounded-xl"
+  >
+    <IoLogoWhatsapp className="h-9 w-9 pr-2" />
+    <span className="text-lg lg:text-2xl font-medium text-[#026336]">
+      Get Free Admission Counselling
+    </span>
+  </a>
+</div>
     </div>
   );
 }

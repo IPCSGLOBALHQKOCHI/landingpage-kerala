@@ -142,7 +142,7 @@ const ImageSlider = () => {
             className="relative flex-shrink-0"
             style={{
               width: `${100 / imagesPerView}%`, // Dynamically calculate width
-              height: "600px",
+              height: "650px",
             }}
           >
             {/* Overlay container for title and description */}
@@ -151,7 +151,7 @@ const ImageSlider = () => {
               <h1 className="text-white text-4xl font-semibold my-1">
                 {image.title2}
               </h1>
-              <div className="absolute bottom-[252px] left-1/2 transform -translate-x-1/2 flex gap-2">
+              <div className="absolute bottom-[275px] left-1/2 transform -translate-x-1/2 flex gap-2">
                 {Array.from({ length: 24 }).map((_, index) => (
                   <button
                     key={index}

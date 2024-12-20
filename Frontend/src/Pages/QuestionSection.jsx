@@ -11,15 +11,15 @@ function QuestionSection() {
   >
     <div className="max-w-7xl mx-auto">
       <div>
-        <h1 className="text-yellow-400 font-semibold text-center text-3xl md:text-5xl pt-8 md:pt-16">
+        <h1 className="text-yellow-400 font-semibold mr-6 text-center text-[27px] md:text-5xl pt-8 md:pt-16">
           Frequently Asked Questions
         </h1>
-        <h5 className="text-center font-normal text-base md:text-lg mt-4 md:mt-6 text-white">
+        <h5 className="text-center font-medium mr-10 text-lg md:text-lg mt-4 md:mt-6 text-white">
           All you need to know
         </h5>
       </div>
       {/* Render the Questions Component */}
-      <div className="mt-8">
+      <div className="mt-2">
         <Questions />
       </div>
     </div>

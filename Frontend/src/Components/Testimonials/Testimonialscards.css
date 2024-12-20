@@ -50,17 +50,17 @@
     color: gold; /* Yellow color */
     margin-right: 5px;
   }
-  @media (min-width: 400px) {
+  @media (max-width: 600px) {
     .carousel-slide {
       flex: 0 0 100%; /* Two slides per view on medium screens */
     }
   
     .carousel-slide img {
-      max-width: 190px;
+      max-width: 300px;
     }
   
     .star {
-      font-size: 22px;
+      font-size: 28px;
     }
   }
 

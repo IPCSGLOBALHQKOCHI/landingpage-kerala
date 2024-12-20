@@ -65,7 +65,7 @@ function ContactForm() {
               We’ll contact you in just 20 minutes and deliver the Syllabus straight to your WhatsApp!!
             </p>
          <div class="flex justify-center space-x-4">
-  <a href="https://wa.me/<phone_number>" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/message/2JUOJKIQBVEUD1" target="_blank" rel="noopener noreferrer">
     <img src="../../../src/assets/images/09.whatsapp.png" alt="WhatsApp" class="w-12 h-12" />
   </a>
   
@@ -73,7 +73,7 @@ function ContactForm() {
     <img src="../../../src/assets/images/call.png" alt="Call" class="w-12 h-12" />
   </a>
   
-  <a href="https://www.yourwebsite.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.ipcsglobal.com" target="_blank" rel="noopener noreferrer">
     <img src="../../../src/assets/images/web.png" alt="Website" class="w-12 h-12" />
   </a>
 </div>
@@ -289,10 +289,10 @@ function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex items-center space-x-4 px-3 py-2  md:px-4 md:py-2 sm:px-3 sm:py-2 xl:px-4 rounded-full bg-yellow-400 text-black font-semibold text-base sm:text-xl"
+                  className="flex space-x-4 px-3 py-2  md:px-4 md:py-2 sm:px-3 sm:py-2 xl:px-4 rounded-full bg-yellow-400 justify-center items-center text-black font-semibold text-base sm:text-xl"
                 >
                   <span>Submit Now</span>
-                  <div className="bg-white w-8 sm:w-10 h-8 sm:h-10 rounded-full flex justify-center items-center">
+                  <div className="bg-white w-8 ml-16 sm:w-10 h-8 sm:h-10 rounded-full flex justify-center items-center">
                     <FiArrowRight className="text-green-900 text-lg sm:text-xl" />
                   </div>
                 </button>
