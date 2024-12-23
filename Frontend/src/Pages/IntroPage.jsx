@@ -20,7 +20,7 @@ const features = [
 const IntroPage = () => {
   return (
     <div
-      className="w-full h-[1100px] xl:h-[780px] lg:h-[780px] md:h-[760px] sm:h-[700px] bg-cover bg-center"
+      className="w-full h-[1100px] xl:h-[780px] lg:h-[780px] md:h-[760px] sm:h-[700px] bg-cover bg-center !px-1"
       style={{
         background:
           "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",
@@ -42,39 +42,41 @@ const IntroPage = () => {
 
         {/* Left section with the main content */}
         <div className="w-full md:w-1/2 flex flex-col items-start relative">
-          {/* Main Image */}
-          <img
-            src={MainImage}
-            alt="Tech World"
-            className="absolute top-0 left-0 z-[100] opacity-100 mt-12 xl:mt-10 xl:ml-24 ml-32 sm:mt-14 sm:ml-14 md:mt-14 md:ml-20 w-28 sm:w-52 md:w-auto"
-          />
+  {/* Main Image */}
+  <img
+    src={MainImage}
+    alt="Tech World"
+    className="absolute top-0 left-0 z-[100] opacity-100 mt-12 xl:mt-10 ml-32 sm:mt-14 sm:ml-14 md:mt-14 md:ml-20 w-28 sm:w-52 md:w-auto xs:ml-28"
+  />
 
-          {/* Title and Subtitles */}
-          <h1 className="absolute text-center sm:text-center text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-400 mt-36 sm:mt-44 md:mt-40 lg:mt-40 xl:mt-36 ml-20 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24">
-            World’s No.1
-          </h1>
-          <h2 className="absolute break-words sm:whitespace-nowrap text-4xl text-center sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white mt-[200px] sm:mt-[225px] md:mt-[230px] lg:mt-[240px] xl:mt-[225px] ml-2 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24">
-            Industry Based Training Institute
-          </h2>
+  {/* Title and Subtitles */}
+  <h1 className="absolute whitespace-nowrap text-center  text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl  font-bold text-yellow-400 mt-32 sm:mt-44 md:mt-40 lg:mt-40 xl:mt-36 ml-12 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 xs:ml-10 xs:text-[42px]">
+    World’s No.1
+  </h1>
 
-          <h4 className="absolute justify-center break-words  flex xl:text-left text-left sm:text-left md:text-left lg:text-left text-lg sm:text-base md:text-md lg:text-lg xl:text-xl font-light text-white w-[355px] sm:w-[300px] md:w-[400px] lg:w-[530px] xl:w-[640px] mt-[300px] sm:mt-[278px] md:mt-[280px] lg:mt-[300px] xl:mt-[295px] ml-7 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24">
-            We bring you closer to success with the guidance of  Recognized
-            Industrial Experts, offering Practical Learning that meets the
-            demands of Today’s Industries
-          </h4>
-        </div>
+  <h2 className="absolute text-center text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white mt-[200px] sm:mt-[225px] md:mt-[230px] lg:mt-[240px] xl:mt-[225px] ml-2 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 break-words sm:whitespace-nowrap xs:mt-[180px]">
+    Industry Based Training Institute
+  </h2>
+
+  <h4 className="absolute text-justify tracking-wide text-lg sm:text-base md:text-md lg:text-lg xl:text-xl font-light text-white mt-[290px] sm:mt-[278px] md:mt-[280px] lg:mt-[300px] xl:mt-[295px] ml-7 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 w-full !pr-12 sm:w-[340px] md:w-[400px] lg:w-[530px] xl:w-[640px] break-words whitespace-wrap xs:mt-[270px]">
+    We bring you closer to success with the guidance of Recognized
+    Industrial Experts, offering Practical Learning that meets the
+    demands of Today’s Industries
+  </h4>
+</div>
+
 
         {/* Features section */}
-        <div className="absolute mt-[430px] sm:mt-[400px] md:mt-[420px] xl:mt-[400px] lg:mt-[440px] text-right lg:text-right ml-8 xl:ml-24 md:ml-20 lg:ml-20 sm:ml-14 mx-5 sm:mx-10 md:mx-20">
+        <div className="absolute mt-[440px] sm:mt-[400px] md:mt-[420px] xl:mt-[400px] lg:mt-[440px] text-right lg:text-right ml-8 xl:ml-24 md:ml-20 lg:ml-20 sm:ml-14 mx-5 sm:mx-10 md:mx-20">
           <div className="grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 lg:gap-4">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="text-left flex">
                 <img
                   src={TickVector}
                   alt="Tick"
                   className="w-4 h-4 sm:w-4 sm:h-4 md:w-4 md:h-4 lg:w-5 lg:h-5"
                 />
-                <p className="text-lg sm:text-base md:text-md lg:text-lg xl:text-xl text-white ml-2 sm:ml-3">
+                <p className="text-[18px] sm:text-base md:text-lg lg:text-lg xl:text-xl -mt-1 text-white ml-2 sm:ml-3">
                   {feature}
                 </p>
               </div>
@@ -84,7 +86,7 @@ const IntroPage = () => {
 
         {/* Explore Courses Button */}
         <button   onClick={() => document.getElementById("contactSection").scrollIntoView({ behavior: "smooth" })}
-         className="absolute flex items-center space-x-14 pr-2 rounded-full py-[10px] pl-10  text-black font-semibold text-lg mt-[570px] sm:mt-[540px] md:mt-[600px] lg:mt-[610px] xl:mt-[550px] ml-16 xl:ml-24 md:ml-20 sm:ml-14 lg:ml-24"
+         className="absolute flex items-center space-x-14 pr-2 rounded-full py-[10px] pl-10  text-black font-semibold text-lg mt-[570px] sm:mt-[540px] md:mt-[600px] lg:mt-[610px] xl:mt-[550px] ml-16 xl:ml-24 md:ml-20 sm:ml-14 lg:ml-24 xs:ml-9 xs:mt-[590px]"
          style={{
           background: "linear-gradient(to right, #FFE902 0%, #FEBE10 100%)",
         }}>
@@ -96,7 +98,6 @@ const IntroPage = () => {
 
         {/* Video Slider section (only for larger screens, below the left section) */}
         <div>
-          {/* First VideoSlider: Visible on md and larger */}
           <div>
             <VideoSlider />
           </div>

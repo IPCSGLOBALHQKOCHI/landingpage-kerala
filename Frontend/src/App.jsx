@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
 import StickOnContent from "./Components/StickOnContents";
 import NeonEffect from "./Components/CursorEffect/NeonEffect"
+
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden">

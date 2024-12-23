@@ -223,5 +223,49 @@
 
 
 
+  .swiper-slide .content {
+    opacity: 0; /* Hidden by default */
+    /* transition: opacity 0.3s ease; */
+  }
+  
+  .swiper-slide-active .content {
+    opacity: 1; /* Visible only for active slide */
+  }
+  
+  .swiper-slide-active .content .name {
+    margin-top: 270px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight:600;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 1 forwards;
+    margin-right: 250px;
+    color: yellow;
 
+  }
+  
+  .swiper-slide-active .content .des {
+    font-size: 18px;
+    opacity: 0;
+    font-weight: 500;
+    color: #ffffff;
+    animation: fadeInUp 1s ease-in-out 0.3s 1 forwards;
+    margin-right: 200px;
+
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+      filter: blur(33px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  
+  
     

@@ -49,7 +49,7 @@ const Footer = () => {
               <FaFacebook className="w-7 h-7" />
             </a>
             <a
-              href="https://www.instagram.com/ipcs_global/"
+              href="https://www.instagram.com/ipcsglobal.kerala/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-gray-900 text-xl"
@@ -57,7 +57,7 @@ const Footer = () => {
               <FaInstagram className="w-7 h-7" />
             </a>
             <a
-              href="https://www.linkedin.com/in/ipcs-global/"
+              href="https://in.linkedin.com/company/ipcs-global"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-gray-900  text-xl"
@@ -84,99 +84,99 @@ const Footer = () => {
             {[
               {
                 name: "Kochi",
-                link: "https://ipcsglobal.com/ipcs-global-kochi/",
+                link: "#contactSection",
               },
               {
                 name: "Calicut",
-                link: "https://ipcsglobal.com/calicut-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Trivandrum",
-                link: "https://ipcsglobal.com/ipcs-global-trivandrum/",
+                link: "#contactSection",
               },
               {
                 name: "Attingal",
-                link: "https://ipcsglobal.com/attingal-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Kollam",
-                link: "https://ipcsglobal.com/kollam-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Kannur",
-                link: "https://ipcsglobal.com/kannur-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Thrissur",
-                link: "https://ipcsglobal.com/thrissur-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Perinthalmanna",
-                link: "https://ipcsglobal.com/perinthalmanna/",
+                link: "#contactSection",
               },
               {
                 name: "Kottayam",
-                link: "https://ipcsglobal.com/ipcs-global-kottayam/",
+                link: "#contactSection",
               },
               {
                 name: "Pathanamthitta",
-                link: "https://ipcsglobal.com/ipcs-global-pathanamthitta/",
+                link: "#contactSection",
               },
               {
                 name: "Palakkad",
-                link: "https://ipcsglobal.com/ipcs-global-palakkad/",
+                link: "#contactSection",
               },
               {
                 name: "Dubai",
-                link: "https://ipcsglobal.com/dubai-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Riyadh",
-                link: "https://ipcsglobal.com/riyadh-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Chennai",
-                link: "https://ipcsglobal.com/chennai-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Tambaram",
-                link: "https://ipcsglobal.com/tambaram-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Trichy",
-                link: "https://ipcsglobal.com/trichy-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Madurai",
-                link: "https://ipcsglobal.com/madurai-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Hyderabad",
-                link: "https://ipcsglobal.com/hyderabad-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Erode",
-                link: "https://ipcsglobal.com/erode-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Tirunelveli",
-                link: "https://ipcsglobal.com/ipcs-global-tirunelveli/",
+                link: "#contactSection",
               },
               {
                 name: "Bangalore",
-                link: "https://ipcsglobal.com/bangalore-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Mangalore",
-                link: "https://ipcsglobal.com/mangalore-ipcs-global/",
+                link: "#contactSection",
               },
               {
                 name: "Ranchi",
-                link: "https://ipcsglobal.com/ipcs-global-ranchi/",
+                link: "#contactSection",
               },
               {
                 name: "Raipur",
-                link: "https://ipcsglobal.com/ipcs-global-raipur/",
+                link: "#contactSection",
               },
             ].map((location, index) => (
               <a

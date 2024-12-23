@@ -4,7 +4,8 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FiArrowRight } from "react-icons/fi";
-import { FaCaretDown } from "react-icons/fa";
+import images from "../../assets/images/call.png"
+import { FaWhatsappSquare,FaCaretDown } from "react-icons/fa";
 import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1).png";
 function ContactForm() {
   // Validation schema using Yup
@@ -49,7 +50,8 @@ function ContactForm() {
       console.log(updatedValues);
 
       const response = await axios.post(
-        "http://localhost:5000/api/submitform",
+        // "http://localhost:5000/api/submitform",
+        "https://landingpage-backend-seven.vercel.app/api/submitform",
         updatedValues,
         {
           headers: {
@@ -60,34 +62,21 @@ function ContactForm() {
       if (response.status === 200) {
         Swal.fire({
           title: "<h2 class='text-3xl font-bold text-black'>You’re In!</h2>",
-          html: `
+          html: ` 
             <p class='text-black mb-4 text-lg'>
               We’ll contact you in just 20 minutes and deliver the Syllabus straight to your WhatsApp!!
             </p>
-         <div class="flex justify-center space-x-4">
-  <a href="https://wa.me/message/2JUOJKIQBVEUD1" target="_blank" rel="noopener noreferrer">
-    <img src="../../../src/assets/images/09.whatsapp.png" alt="WhatsApp" class="w-12 h-12" />
-  </a>
-  
-  <a href="tel:+91 98467 70771">
-    <img src="../../../src/assets/images/call.png" alt="Call" class="w-12 h-12" />
-  </a>
-  
-  <a href="https://www.ipcsglobal.com" target="_blank" rel="noopener noreferrer">
-    <img src="../../../src/assets/images/web.png" alt="Website" class="w-12 h-12" />
-  </a>
-</div>
-
-          `,
+         `,
           icon: "success",
           iconColor: "#008145",
           background: "#E0FFF1",
           showCloseButton: true,
-          showConfirmButton: false,
+          showConfirmButton: true,
           customClass: {
             popup: "rounded-xl px-6 py-6 relative",
             closeButton:
               "absolute top-1 right-1 border hover:text-black border-black text-black rounded-full",
+              confirmButton:"text-[#E0FFF1] bg-[#008145]"
           },
         });
       } else {
@@ -102,6 +91,7 @@ function ContactForm() {
         confirmButtonText: "Close",
         customClass: {
           popup: "rounded-xl px-6 py-6 relative",
+          confirmButton:"text-[#E0FFF1] bg-[#008145]"
         },
       });
       console.error("Error details:", error.response || error.message || error);

@@ -9,6 +9,12 @@ export default {
       colors: {
         customGreen: "#00351C",
       },
+      fontFamily: {
+        pops: ["Poppins", "sans"],
+      },
+      screens: {
+        xs: {max:"340px"} ,
+      },
     },
   },
   plugins: [],

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import video1 from "../../src/assets/videos/Ruksana Testimonial for Web.mp4";
-import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
+import { useSwipeable } from "react-swipeable";
+// import video1 from "../../src/assets/videos/Ruksana Testimonial for Web.mp4";
+// import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
 // import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
-import video3 from "../../src/assets/videos/Levy Sandra Testimonial v2_1.mp4"
+// import video3 from "../../src/assets/videos/Levy Sandra Testimonial v2_1.mp4"
+const video1="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Sinu-Jasmin-Testimonial-for-Web.mp4"
+const video2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Muhammed-Sinan-Testimonial-for-Web.mp4"
+const video3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Levy-Sandra-Testimonial-v2_1-1.mp4"
 const VideoSlider = () => {
   const videos = [video1, video2, video3];
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
@@ -26,21 +30,28 @@ const VideoSlider = () => {
     right: { x: "35%", scale: 0.8, zIndex: 1 },
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to go to the next video
+    onSwipedRight: handleBack, // Swipe right to go to the previous video
+    preventScrollOnSwipe: true,
+  });
+
   return (
-    <div className="relative flex items-center justify-center ">
+    <div className="relative flex items-center justify-center "
+    {...swipeHandlers}>
       {/* Navigation Arrows */}
       <button
   onClick={handleNext}
-  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
-  sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[720px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px]"
+  className="absolute hidden sm:hidden md:hidden lg:block  left-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
+  sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[710px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px]"
 >
   {'<'} {/* Left Arrow */}
 </button>
 
 <button
   onClick={handleBack}
-  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
-  sm:mr-[2px] md:mr-[8px] lg:mr-[10px] xl:mr-[16px] mr-[0px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px] "
+  className="absolute hidden sm:hidden md:hidden lg:block right-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
+  sm:mr-[2px] md:mr-[8px] lg:mr-[10px] xl:mr-[16px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px] "
 >
   {'>'}{/* Right Arrow */}
 </button>
@@ -52,7 +63,7 @@ const VideoSlider = () => {
     <motion.video
       key={index}
       src={video}
-      className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1660px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
+      className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
       initial="center"
       animate={Object.keys(imageVariants)[positionIndexes[index]]}
       variants={imageVariants}

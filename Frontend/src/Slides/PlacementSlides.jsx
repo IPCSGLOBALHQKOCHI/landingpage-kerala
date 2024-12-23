@@ -1,44 +1,83 @@
-import image1 from "../assets/images/Group 427319157.png";
-import image2 from "../assets/images/Group 427319158.png";
-import image3 from "../assets/images/Group 427319159.png";
-import image4 from "../assets/images/Group 427319160.png";
-import image5 from "../assets/images/Group 427319161.png";
-import image6 from "../assets/images/Group 427319162.png"
+import image1 from "../assets/images/Ruksana.png";
+import image2 from "../assets/images/sinu.png";
+import image3 from "../assets/images/sinan.png";
+import image4 from "../assets/images/ashik.png";
+import image5 from "../assets/images/vyshna.png";
+import image6 from "../assets/images/athulya.png"
  export const slides = [
     {
-      name: "Anjana Prakash",
+      name: "Ruksana ",
       Position:
-        "Digital Marketing excutive",
+        "Digital Marketing Excutive",
       imageUrl: image1,
+    },
+    {
+      name: "Sinu ",
+      Position:
+        "Digital Marketing Excutive",
+      imageUrl: image2,
+    },
+    {
+      name: "Sinan ",
+      Position:
+        "Digital Marketing Excutive",
+      imageUrl: image3,
+    },
+    {
+      name: "Ashik ",
+      Position:
+        "Digital Marketing Excutive",
+      imageUrl: image4,
+    },
+    {
+      name: "Vyshna",
+      Position:
+        "Digital Marketing Excutive",
+      imageUrl: image5,
     },
     {
       name: "Athulya",
       Position:
-        "Digital Marketing excutive",
+        "Digital Marketing Excutive",
+      imageUrl: image6,
+    }
+  ];
+
+   export const slides2 = [
+    {
+      name: "Ruksana ",
+      Position:
+        "D M Excutive",
+      imageUrl: image1,
+    },
+    {
+      name: "Sinu ",
+      Position:
+        "D M Excutive",
       imageUrl: image2,
     },
     {
-      name: "Abhijith",
+      name: "Sinan ",
       Position:
-        "Digital Marketing excutive",
+        "D M Excutive",
       imageUrl: image3,
     },
     {
-      name: "Anzil",
+      name: "Ashik ",
       Position:
-        "Digital Marketing excutive",
+        "D M Excutive",
       imageUrl: image4,
     },
     {
-      name: "Nashid",
+      name: "Vyshna",
       Position:
-        "Digital Marketing excutive",
+        "D M Excutive",
       imageUrl: image5,
     },
     {
-      name: "Anjana Prakash",
+      name: "Athulya",
       Position:
-        "Digital Marketing excutive",
+        "D M Excutive",
       imageUrl: image6,
     }
   ];

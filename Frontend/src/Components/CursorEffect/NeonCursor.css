@@ -29,4 +29,8 @@
     transition: border-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
   }
 
-  
+  @media (max-width: 768px) { /* Adjust the max-width as needed for your breakpoints */
+    .neon-cursor-container {
+      display: none;
+    }
+  }

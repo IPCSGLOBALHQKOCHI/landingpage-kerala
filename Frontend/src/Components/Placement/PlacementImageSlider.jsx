@@ -79,7 +79,7 @@ import "./PlacementImageSlider.css";
 
 const PlacementImageSlider = () => {
   return (
-    <div className="hidden md:block">
+    <div className="hidden md:hidden lg:block">
 
     <Swiper
       modules={[Autoplay, Pagination]}
@@ -94,15 +94,19 @@ const PlacementImageSlider = () => {
         disableOnInteraction: false,
       }}
       >
-      {slides.map((image, index) => (
-        <SwiperSlide key={index} className="relative">
-          <img
-            src={image.imageUrl}
-            alt={image.name}
-            className="w-full h-full object-cover rounded-lg"
-            />
-        </SwiperSlide>
-      ))}
+  {slides.map((image, index) => (
+  <SwiperSlide key={index} className="relative">
+     <div className="absolute inset-0 flex flex-col z-50 content">
+      <div className="name">{image.name}</div>
+      <div className="des">{image.Position}</div>
+    </div>
+    <img
+      src={image.imageUrl}
+      alt={image.name}
+      className="w-full h-full object-cover rounded-lg"
+    />
+  </SwiperSlide>
+))}
     </Swiper>
       </div>
   );

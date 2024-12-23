@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './Testimonialscards.css';
 
 const cards = [
-  { image: "../../../src/assets/images/irfan.png", heading: "Automation  <br/> Engineer",name:"Irfan I" },
-  { image: "../../../src/assets/images/mijin.png", heading: "Digital marketing <br/> Excutive",name:"Mijun Mathias"  },
-  { image: "../../../src/assets/images/subhajini.png", heading: "Software <br/> Engineer",name:"Dr.A.C. Subhajini"  },
-  { image: "../../../src/assets/images/visak.png", heading: "CCTV <br/> Technician",name:"Visakh S"  },
+  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/irfan.png", heading: "Automation Engineer",name:"Irfan I" },
+  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/mijin.png", heading: "Digital marketing Excutive",name:"Mijun Mathias"  },
+  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/subhajini.png", heading: "Software  Engineer",name:"Dr.A.C. Subhajini"  },
+  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/visak.png", heading: "CCTV  Technician",name:"Visakh S"  }, 
 ];
 
 const TestimonialsCards = () => {
@@ -39,7 +39,7 @@ const TestimonialsCards = () => {
           color: 'white',
         }}>
           {/* Heading */}
-          <h3 className="text-white font-semibold text-xl mb-1"dangerouslySetInnerHTML={{ __html: card.heading }}></h3>
+          <h3 className="text-white font-semibold text-xl mb-4"dangerouslySetInnerHTML={{ __html: card.heading }}></h3>
 
           {/* Image */}
           <div className="w-full rounded-md">
