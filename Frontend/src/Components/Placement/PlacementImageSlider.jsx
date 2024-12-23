@@ -74,12 +74,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { slides } from "../../Slides/PlacementSlides";
+import { slides } from "../../Slides/ConstantSlides";
 import "./PlacementImageSlider.css";
 
 const PlacementImageSlider = () => {
   return (
-    <div className="hidden md:hidden lg:block">
+    <div className="hidden md:hidden lg:block xl:block 2xl:hidden ">
 
     <Swiper
       modules={[Autoplay, Pagination]}

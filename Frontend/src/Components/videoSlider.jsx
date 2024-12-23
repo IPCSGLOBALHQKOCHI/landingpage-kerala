@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
+import left from "../../src/assets/vectors/left.png"
+import right from "../../src/assets/vectors/rigt.png"
 // import video1 from "../../src/assets/videos/Ruksana Testimonial for Web.mp4";
 // import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
 // import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
@@ -42,19 +44,17 @@ const VideoSlider = () => {
       {/* Navigation Arrows */}
       <button
   onClick={handleNext}
-  className="absolute hidden sm:hidden md:hidden lg:block  left-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
+  className="absolute hidden sm:hidden md:hidden lg:block  left-4 top-1/2 transform -translate-y-1/2 bg-gray-600 bg-opacity-25 p-2 sm:p-3 rounded-full z-10 
   sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[710px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px]"
 >
-  {'<'} {/* Left Arrow */}
-</button>
+<img src={left} alt="Previous" className="text-white w-3 h-3" /></button>
 
 <button
   onClick={handleBack}
-  className="absolute hidden sm:hidden md:hidden lg:block right-4 top-1/2 transform -translate-y-1/2 text-white p-2 sm:p-3 rounded-full z-10 
-  sm:mr-[2px] md:mr-[8px] lg:mr-[10px] xl:mr-[16px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px] "
+  className="absolute hidden sm:hidden md:hidden lg:block right-4 top-1/2 transform -translate-y-1/2 bg-gray-600 bg-opacity-25 p-2 sm:p-3 rounded-full z-10 
+  sm:mr-[2px] md:mr-[8px] lg:mr-[10px] xl:mr-[12px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px] "
 >
-  {'>'}{/* Right Arrow */}
-</button>
+<img src={right} alt="Previous" className="text-white w-3 h-3" /></button>
 
 
       {/* Video Carousel */}

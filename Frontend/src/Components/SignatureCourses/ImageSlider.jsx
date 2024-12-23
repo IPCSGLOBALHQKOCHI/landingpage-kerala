@@ -2,76 +2,26 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 // import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useSwipeable } from "react-swipeable";
-
+import {cards} from "../../Slides/ConstantSlides"
 import BottomImage from "../../../src/assets/vectors/WHITE HALF CIRCLE 1 (1).png";
 import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
+import left from "../../../src/assets/vectors/left.png"
+import right from "../../../src/assets/vectors/rigt.png"
 
-import image1 from "../../../src/assets/images/softwareTesting.png";
-import image2 from "../../../src/assets/images/pythonandDS.png";
-import image3 from "../../../src/assets/images/BMSandCCTV.png";
-import image4 from "../../../src/assets/images/AiandDM.png";
-import image5 from "../../../src/assets/images/industrialAutomation.png";
-import image6 from "../../../src/assets/images/Ai.png";
-import image7 from "../../../src/assets/images/IoT.png";
-const cards = [
-  {
-    title1: "Software",
-    title2: "Testing",
-    description: "SELENIUM WEBDRIVER | JIRA |<br/> CI/CD INTEGRATION",
-    image: image1,
-  },
-  {
-    title1: "Python and",
-    title2: "Data Science",
-    description: "PYTHON DATA SCIENCE | <br/> ANDROID APP DEVELOPMENT",
-    image: image2,
-  },
-  {
-    title1: "BMS and ",
-    title2: "CCTV",
-    description:
-      "SECURITY SYSTEM | FIRE ALARM |<br/> ACCESS CONTROL SYSTEM | KERAS",
-    image: image3,
-  },
-  {
-    title1: "Ai Integrated ",
-    title2: "Digital Marketing",
-    description: "SEO | SEM | SMM | SMO |<br/> AFFILIATE MARKETING",
-    image: image4,
-  },
-  {
-    title1: "Industrial ",
-    title2: "Automation",
-    description: "PLC | SCADA | DCS |<br/> CONTROL PANEL DESIGN",
-    image: image5,
-  },
-  {
-    title1: "Artificial ",
-    title2: "Intelligence ",
-    description: "TensorFlow | Keras",
-    image: image6,
-  },
-  {
-    title1: "Embedded ",
-    title2: "& IoT",
-    description: "PIC | ARM | Raspberry Pi | <br/> Arduino",
-    image: image7,
-  },
-];
+
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [imagesPerView, setImagesPerView] = useState(3); // Default to 3 for large screens
+  const [imagesPerView, setImagesPerView] = useState(3); 
   const controls = useAnimation();
   const containerRef = useRef(null);
 
-  // Update imagesPerView based on screen size
   useEffect(() => {
     const updateImagesPerView = () => {
       if (window.innerWidth >= 1024) {
-        setImagesPerView(3); // Large screens (lg and above)
+        setImagesPerView(3); 
       } else if ((window, innerWidth >= 786 && window, innerWidth >= 640)) {
-        setImagesPerView(2); // Small screens (sm and below)
+        setImagesPerView(2); 
       } else {
         setImagesPerView(1);
       }
@@ -83,13 +33,7 @@ const ImageSlider = () => {
     return () => window.removeEventListener("resize", updateImagesPerView);
   }, []);
 
-  // Calculate the total slides
   const maxIndex = Math.max(0, cards.length - imagesPerView);
-
-  // const handleDotClick = (index) => {
-  //   setCurrentIndex(index);
-  //   controls.start({ x: `-${index * (100 / imagesPerView)}%` });
-  // };
 
   const handleNext = () => {
     const nextIndex = Math.min(currentIndex + 1, maxIndex);
@@ -115,7 +59,7 @@ const ImageSlider = () => {
       className="relative flex items-center justify-center h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px] overflow-hidden"
       {...swipeHandlers}
     >
-      <div className="absolute top-0 left-0 right-0 z-10 ">
+      <div className="absolute top-0 left-0 right-0 z-10 hidden sm:hidden md:block lg:block xl:block ">
         <img
           src={BottomImage}
           alt="Top Image"
@@ -123,17 +67,16 @@ const ImageSlider = () => {
         />
       </div>
       <button
-    className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl z-20"
+    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
     onClick={handlePrev}
   >
-    &#8592; {/* Left arrow symbol */}
-  </button>
+<img src={left} alt="Next" className="text-white w-5 h-5"/>  </button>
 
   <button
-    className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl z-20"
+    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
     onClick={handleNext}
   >
-    &#8594; {/* Right arrow symbol */}
+<img src={right} alt="Next" className="text-white w-5 h-5"/>
   </button>
       {/* Sliding Images */}
       <motion.div
@@ -146,15 +89,15 @@ const ImageSlider = () => {
                 cards.length *
                   (containerRef.current.offsetWidth / imagesPerView) -
                 containerRef.current.offsetWidth
-              ) - 120 // Add 50px space after the last image
+              ) - 120 
             : 0,
           right: 0,
         }}
         dragElastic={0.2}
         onDragEnd={(event, info) => {
           if (info.offset.x < -50 && currentIndex < maxIndex)
-            handleNext(); // Swipe left
-          else if (info.offset.x > 50 && currentIndex > 0) handlePrev(); // Swipe right
+            handleNext(); 
+          else if (info.offset.x > 50 && currentIndex > 0) handlePrev();
         }}
         animate={controls}
         transition={{ type: "spring", stiffness: 50 }}
@@ -165,7 +108,7 @@ const ImageSlider = () => {
             key={index}
             className="relative flex-shrink-0 "
             style={{
-              width: `${100 / imagesPerView}%`, // Dynamically calculate width
+              width: `${100 / imagesPerView}%`, 
               height: "640px",
             }}
           >
@@ -213,7 +156,7 @@ const ImageSlider = () => {
         ))}
         
       </motion.div>
-      <div className="absolute bottom-0 left-0 right-0 z-10 hidden sm:hidden md:hidden lg:block xl:block">
+      <div className="absolute bottom-0 left-0 right-0 z-10 hidden sm:hidden md:block lg:block xl:block">
         <img
           src={Topimage}
           alt="Top Image"

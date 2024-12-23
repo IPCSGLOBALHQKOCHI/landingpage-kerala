@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import whatsappIcon from "../../src/assets/images/whatsapp_3670133.png"
 import CallIcon from "../../src/assets/images/telephone_724664.png"
+import { TbMessageCircleSearch } from "react-icons/tb";
 const StickOnContents = () => {
+  const [showText, setShowText] = useState(false);
+  useEffect(() => {
+    const cycleStates = () => {
+      setShowText(false);
+      setTimeout(() => {
+        setShowText(true);
+        setTimeout(cycleStates, 2000);
+      }, 5000); 
+    };
+
+    cycleStates();
+
+    return () => clearTimeout(cycleStates); 
+  }, []);
   return (
     <div className="fixed  bottom-2 right-5 flex flex-col items-end space-y-4 z-50">
     {/* Icons Container */}
@@ -33,12 +48,34 @@ const StickOnContents = () => {
             behavior: "smooth",
           })
         }
-        className="flex items-center justify-center px-6 py-3 rounded-full text-black font-semibold text-base"
+        className="flex items-center justify-center px-6 py-6 rounded-full text-black font-semibold text-base transition-all duration-500 ease-in-out"
         style={{
           background: "linear-gradient(to right, #FFE902 0%, #FEBE10 100%)",
+          width: showText ? "200px" : "60px", // Smooth width transition
         }}
       >
-        <span className="text-xl">Enquire Now</span>
+        <div
+          className={`flex items-center justify-center transition-opacity duration-500 ease-in-out ${
+            showText ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            position: "absolute",
+            visibility: showText ? "visible" : "hidden",
+          }}
+        >
+          <span className="text-xl">Enquire Now</span>
+        </div>
+        <div
+          className={`flex items-center justify-center transition-opacity duration-500 ease-in-out ${
+            !showText ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            position: "absolute",
+            visibility: !showText ? "visible" : "hidden",
+          }}
+        >
+          <TbMessageCircleSearch className="text-lg w-8 h-8 " />
+        </div>
       </button>
     </div>
   </div>  

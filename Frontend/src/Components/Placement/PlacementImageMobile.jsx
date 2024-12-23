@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { slides2 } from "../../Slides/PlacementSlides";
+import { slides2 } from "../../Slides/ConstantSlides";
 
 const PlacementImageMobile = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

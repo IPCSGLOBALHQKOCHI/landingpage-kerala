@@ -1,7 +1,8 @@
 import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import ContactForm from "../Components/ContactForm/ContactForm";
-import ContactImage from "../../src/assets/images/ea93a0a6-cdfe-4f9f-9e1e-4ff62834d446 1.png";
+// import ContactImage from "../../src/assets/images/contactImage.png";
+const ContactImage ="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/contactImage.png"
 import LogoVector from "../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 2 (2).png";
 // import WhatsappLogo from "../../src/assets/images/whatsappLogo.png.png";
 function Contact() {

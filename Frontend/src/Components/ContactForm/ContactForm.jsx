@@ -4,7 +4,6 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FiArrowRight } from "react-icons/fi";
-import images from "../../assets/images/call.png"
 import { FaWhatsappSquare,FaCaretDown } from "react-icons/fa";
 import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1).png";
 function ContactForm() {
@@ -192,10 +191,9 @@ function ContactForm() {
                       <option value="Kollam">Kollam</option>
                       <option value="Kannur">Kannur</option>
                       <option value="Thrissur">Thrissur</option>
-                      <option value="Perinthalmana">Perinthalmana</option>
+                      <option value="Perinthalmana">Perinthalmanna</option>
                       <option value="Kottayam">Kottayam</option>
-                      <option value="Pathanimthitta">Pathanimthitta</option>
-                      <option value="Palakkad">Palakkad</option>
+                      <option value="Pathanimthitta">Pathanamthitta</option>
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
                       <FaCaretDown />
