@@ -20,7 +20,7 @@ const features = [
 const IntroPage = () => {
   return (
     <div
-      className="w-full h-[1100px] xl:h-[780px] lg:h-[780px] md:h-[760px] sm:h-[700px] bg-cover bg-center !px-1"
+     id="home" className="w-full h-[1100px] xl:h-[780px] lg:h-[780px] md:h-[760px] sm:h-[700px] bg-cover bg-center !px-1"
       style={{
         background:
           "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",

@@ -8,7 +8,7 @@ function Placement() {
     <div className="mb-[80px] mt-8">
       <h1 className="text-black text-3xl sm:text-4xl md:text-5xl text-center font-bold sm:font-bold"> 
         Your Future, 
-        <span className="text-[#067D45]">Our Focus</span>, Your Fulfillment
+        <span className="text-[#067D45]"> Our Focus</span>, Your Fulfillment
       </h1>
       <h3 className="text-center text-lg sm:text-xl md:text-2xl font-medium text-black text-opacity-70 mt-3">
         Placement Assistance

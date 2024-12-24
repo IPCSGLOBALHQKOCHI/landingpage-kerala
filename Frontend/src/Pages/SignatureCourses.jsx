@@ -3,7 +3,7 @@ import ImageSlider from '../Components/SignatureCourses/ImageSlider'
 
 function SignatureCourses() {
   return (
-    <div className=' absloute w-full h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px]  mt-20 mb-40'>
+    <div id="courses" className=' absloute w-full h-[720px] sm:h-[720px] md:h-[700px] lg:h-[680px] xl:h-[650px]  mt-20 mb-40'>
         <div>
             <h1 className='text-black text-center text-4xl font-bold'>Signature <span className='text-[#008145]'>Courses</span></h1>
             <h3 className='text-center text-lg font-medium text-black text-opacity-80 !px-2 mt-3'>Check our extensive range of educational offerings</h3>

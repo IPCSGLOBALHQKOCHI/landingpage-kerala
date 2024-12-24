@@ -97,6 +97,7 @@ import React, { useState } from "react";
 import { videoSlides } from "../../Slides/ConstantSlides";
 import left from "../../../src/assets/vectors/left.png";
 import right from "../../../src/assets/vectors/rigt.png";
+import { useSwipeable } from "react-swipeable";
 
 const SuccessSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -125,8 +126,16 @@ const SuccessSlider = () => {
     (_, i) => (currentIndex + i) % totalSlides
   );
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to go to the next image
+    onSwipedRight: handlePrev, // Swipe right to go to the previous image
+    preventScrollOnSwipe: true, // Prevent scrolling while swiping
+    trackMouse: true, // Enable mouse swipe events for desktop
+  });
+
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden"
+    {...swipeHandlers}>
       {/* Navigation Buttons */}
       <button
         onClick={handlePrev}

@@ -3,7 +3,7 @@ import Questions from "../Components/Questions/Question"
 function QuestionSection() {
   return (
     <div
-    className="w-full h-auto min-h-[600px] md:min-h-[750px] bg-cover bg-center py-10 pl-8"
+    id='faq' className="w-full h-auto min-h-[600px] md:min-h-[750px] bg-cover bg-center pl-8"
     style={{
       background:
         "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",
