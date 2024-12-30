@@ -7,9 +7,9 @@ import right from "../../src/assets/vectors/rigt.png"
 // import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
 // import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
 // import video3 from "../../src/assets/videos/Levy Sandra Testimonial v2_1.mp4"
-const video1="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Sinu-Jasmin-Testimonial-for-Web.mp4"
-const video2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Muhammed-Sinan-Testimonial-for-Web.mp4"
-const video3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Levy-Sandra-Testimonial-v2_1-1.mp4"
+const video1="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Muhammed-Sinan-Testimonial.mp4"
+const video2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Ruksana-Testimonial.mp4"
+const video3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Levy-Sandra-Testimonial.mp4"
 const VideoSlider = () => {
   const videos = [video1, video2, video3];
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
