@@ -138,6 +138,7 @@ const ImageSlider = () => {
             <img
               src={image.image}
               alt={`Slide ${index}`}
+              loading="lazy"
               className="w-full h-full object-cover "
             />
 

@@ -47,6 +47,7 @@ const TestimonialsCards = () => {
               src={card.image}
               alt={card.heading}
               className="w-full h-auto rounded-3xl"
+              loading='lazy'
             />
           </div>
 

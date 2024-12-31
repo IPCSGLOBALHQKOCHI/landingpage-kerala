@@ -10,6 +10,7 @@ import right from "../../src/assets/vectors/rigt.png"
 const video1="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Muhammed-Sinan-Testimonial.mp4"
 const video2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Ruksana-Testimonial.mp4"
 const video3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Levy-Sandra-Testimonial.mp4"
+
 const VideoSlider = () => {
   const videos = [video1, video2, video3];
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
@@ -70,6 +71,7 @@ const VideoSlider = () => {
       transition={{ duration: 0.5 }}
       controls
       muted
+      loading="lazy"
     />
   ))}
 </div>

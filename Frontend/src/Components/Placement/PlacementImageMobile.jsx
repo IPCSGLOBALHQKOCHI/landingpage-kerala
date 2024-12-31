@@ -72,6 +72,7 @@ const PlacementImageMobile = () => {
               <img
                 src={slide.imageUrl}
                 alt={slide.name}
+                loading="lazy"
                 className="w-full h-96 min-h-[200px] object-cover rounded-lg"
               />
             </div>

@@ -103,6 +103,7 @@ const PlacementImageSlider = () => {
     <img
       src={image.imageUrl}
       alt={image.name}
+      loading="lazy"
       className="w-full h-full object-cover rounded-lg"
     />
   </SwiperSlide>
