@@ -1,15 +1,15 @@
-// import image1 from "../assets/images/Ruksana.png";
+// import image1 from "../assets/images/ruksana.png";
 // import image2 from "../assets/images/sinu.png";
 // import image3 from "../assets/images/sinan.png";
 // import image4 from "../assets/images/ashik.png";
 // import image5 from "../assets/images/vyshna.png";
 // import image6 from "../assets/images/athulya.png"
-const image1 ="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Ruksana.png"
-const image2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/sinu.png"
-const image3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/sinan.png"
-const image4="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/ashik.png"
-const image5="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/vyshna.png"
-const image6="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/athulya.png"
+const image1 ="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/Ruksana.png"
+const image2="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/sinu.png"
+const image3="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/sinan.png"
+const image4="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/ashik.png"
+const image5="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/vyshna.png"
+const image6="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/athulya.png"
 
  export const slides = [
     {

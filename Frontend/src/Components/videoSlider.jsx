@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import left from "../../src/assets/vectors/left.png"
 import right from "../../src/assets/vectors/rigt.png"
-// import video1 from "../../src/assets/videos/Ruksana Testimonial for Web.mp4";
-// import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial for Web.mp4";
-// import video3 from "../../src/assets/videos/Sinu Jasmin Testimonial for Web.mp4";
-// import video3 from "../../src/assets/videos/Levy Sandra Testimonial v2_1.mp4"
-const video1="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Muhammed-Sinan-Testimonial.mp4"
-const video2="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Ruksana-Testimonial.mp4"
-const video3="https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/Levy-Sandra-Testimonial.mp4"
+// import video1 from "../../src/assets/videos/Ruksana Testimonial.mp4";
+// import video2 from "../../src/assets/videos/Muhammed Sinan Testimonial.mp4";
+// import video3 from "../../src/assets/videos/Levy Sandra Testimonial.mp4"
+const video1="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ruksana-Testimonial.mp4"
+const video2="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Muhammed-Sinan-Testimonial.mp4"
+const video3="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Levy-Sandra-Testimonial.mp4"
 
 const VideoSlider = () => {
   const videos = [video1, video2, video3];

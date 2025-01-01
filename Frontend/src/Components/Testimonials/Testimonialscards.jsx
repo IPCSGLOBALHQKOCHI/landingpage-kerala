@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './Testimonialscards.css';
 
 const cards = [
-  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/irfan.png", heading: "Automation Engineer",name:"Irfan I" },
-  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/mijin.png", heading: "Digital marketing Excutive",name:"Mijun Mathias"  },
-  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/subhajini.png", heading: "Software  Engineer",name:"Dr.A.C. Subhajini"  },
-  { image: "https://ipcsglobal.com/campaign/wp-content/uploads/2024/12/visak.png", heading: "CCTV  Technician",name:"Visakh S"  }, 
+  { image: "https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/irfan.png", heading: "Automation Engineer",name:"Irfan I" },
+  { image: "https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/mijin.png", heading: "Digital marketing Excutive",name:"Mijun Mathias"  },
+  { image: "https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/subhajini.png", heading: "Software  Engineer",name:"Dr.A.C. Subhajini"  },
+  { image: "https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/visak.png", heading: "CCTV  Technician",name:"Visakh S"  }, 
 ];
 
 const TestimonialsCards = () => {

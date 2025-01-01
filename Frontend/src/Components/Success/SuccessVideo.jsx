@@ -155,7 +155,7 @@ const SuccessSlider = () => {
         {visibleSlideIndexes.map((index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[calc(100%/1)] sm:w-[calc(100%/2)] lg:w-[calc(100%/4)] md:w-[calc(100%/3)] xl:w-[calc(100%/4)] h-[563px] mx-6 mt-14 rounded-xl overflow-hidden"
+            className="flex-shrink-0 w-[calc(100%/1.3)] sm:w-[calc(100%/2)] lg:w-[calc(100%/4)] md:w-[calc(100%/3)] xl:w-[calc(100%/4)] h-[563px] xs:h-[490px]  mx-6 ml-12 mt-14 rounded-xl overflow-hidden"
           >
             {videoSlides[index]?.video ? (
               <iframe
