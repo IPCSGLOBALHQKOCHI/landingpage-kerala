@@ -15,37 +15,37 @@ const image6="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/athuly
     {
       name: "Ruksana ",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image1,
     },
     {
       name: "Sinu ",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image2,
     },
     {
       name: "Sinan ",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image3,
     },
     {
       name: "Ashik ",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image4,
     },
     {
       name: "Vyshna",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image5,
     },
     {
       name: "Athulya",
       Position:
-        "Digital Marketing Excutive",
+        "Digital Marketing Executive",
       imageUrl: image6,
     }
   ];
@@ -54,37 +54,37 @@ const image6="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/athuly
     {
       name: "Ruksana ",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image1,
     },
     {
       name: "Sinu ",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image2,
     },
     {
       name: "Sinan ",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image3,
     },
     {
       name: "Ashik ",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image4,
     },
     {
       name: "Vyshna",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image5,
     },
     {
       name: "Athulya",
       Position:
-        "D M Excutive",
+        "D M Executive",
       imageUrl: image6,
     }
   ];

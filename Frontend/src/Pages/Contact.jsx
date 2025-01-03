@@ -64,7 +64,7 @@ function Contact() {
       {/* Button Centered Below */}
       <div className="flex justify-center mt-4 lg:mt-12 mb-6 lg:mb-12">
   <a
-    href="https://wa.me/message/2JUOJKIQBVEUD1"
+     href="https://wa.me/919072496664" 
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center border-2 border-[#014F2A] text-green-600 px-2 lg:px-4 py-2 lg:py-2 rounded-xl"

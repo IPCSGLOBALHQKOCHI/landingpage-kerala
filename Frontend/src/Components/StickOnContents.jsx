@@ -50,7 +50,7 @@ import { FiArrowRight } from "react-icons/fi";
         {/* WhatsApp Button */}
         {/* <WhatsappBot/> */}
         <a
-          href="https://wa.me/message/2JUOJKIQBVEUD1"
+           href="https://wa.me/919072496664" 
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full flex items-center justify-center"
