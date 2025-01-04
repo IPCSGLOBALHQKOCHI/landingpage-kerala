@@ -14,12 +14,12 @@ const QuestionSection = React.lazy(() => import("./Pages/QuestionSection"));
 const Footer = React.lazy(() => import("./Components/Footer"));
 
 import StickOnContent from "./Components/StickOnContents";
-import NeonEffect from "./Components/CursorEffect/NeonEffect";
+// import NeonEffect from "./Components/CursorEffect/NeonEffect";
 
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      <NeonEffect />
+      {/* <NeonEffect /> */}
       <StickOnContent />
       <IntroPage />
       <Contact />
