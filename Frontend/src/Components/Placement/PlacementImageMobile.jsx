@@ -7,7 +7,7 @@ const PlacementImageMobile = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides2.length);
-    }, 1700);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);

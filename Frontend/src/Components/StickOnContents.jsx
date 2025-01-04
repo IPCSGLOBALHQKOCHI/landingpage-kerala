@@ -3,10 +3,10 @@ import whatsappIcon from "../../src/assets/images/whatsapp_3670133.png";
 import CallIcon from "../../src/assets/images/telephone_724664.png";
 import { TbMessageCircleSearch } from "react-icons/tb";
 import mobile from "../../src/assets/images/mobilepopup.png";
-import desktop from "../../src/assets/images/desktopopup.png";
+import desktop from "../../src/assets/images/webpopup.png";
 import { FiArrowRight } from "react-icons/fi";
 
- const StickOnContents = () => {
+const StickOnContents = () => {
   const [showText, setShowText] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -33,8 +33,6 @@ import { FiArrowRight } from "react-icons/fi";
     };
   }, []);
 
-
-
   return (
     <div className="fixed bottom-2 right-5 flex flex-col items-end space-y-4 z-50">
       {/* Icons Container */}
@@ -50,14 +48,14 @@ import { FiArrowRight } from "react-icons/fi";
         {/* WhatsApp Button */}
         {/* <WhatsappBot/> */}
         <a
-           href="https://wa.me/919072496664" 
+          href="https://wa.me/919072496664"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full flex items-center justify-center"
         >
           <img src={whatsappIcon} alt="WhatsApp Icon" />
         </a>
-             {/* <button
+        {/* <button
           onClick={() => {
             // Trigger the chatbot interface when the WhatsApp button is clicked
             if (window.ktt10) {
@@ -111,31 +109,38 @@ import { FiArrowRight } from "react-icons/fi";
 
       {/* Popup Section */}
       {showPopup && (
-  <div className="fixed inset-0 flex justify-center items-center z-50">
-    <div className="w-[430px] h-[410px] lg:w-[550px] lg:h-[450px] xl:h-[450px] xl:w-[520px] p-4 rounded shadow-lg relative">
-      {/* Close Button */}
-      <button
-        onClick={() => setShowPopup(false)}
-        className="absolute top-4 right-4 lg:top-5 lg:right-5 text-white"
-      >
-        ✖
-      </button>
+        <div className="fixed inset-0 flex justify-center items-center z-50">
+          <div className="w-[430px] h-[410px] lg:w-[550px] lg:h-[450px] xl:h-[450px] xl:w-[520px] p-4 rounded shadow-lg relative">
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                const contactSection =
+                  document.getElementById("contactSection");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+                setShowPopup(false); 
+              }}
+              className="absolute top-4 right-4 lg:top-5 lg:right-5 text-white"
+            >
+              ✖
+            </button>
 
-      {/* Mobile Image */}
-      <img
-        src={mobile} // Replace with the small image URL
-        alt="Popup Small"
-        className="block lg:hidden w-full h-auto"
-      />
-      {/* Desktop Image */}
-      <img
-        src={desktop} // Replace with the large image URL
-        alt="Popup Large"
-        className="hidden lg:block w-full h-auto"
-      />
+            {/* Mobile Image */}
+            <img
+              src={mobile} // Replace with the small image URL
+              alt="Popup Small"
+              className="block lg:hidden w-full h-auto"
+            />
+            {/* Desktop Image */}
+            <img
+              src={desktop} // Replace with the large image URL
+              alt="Popup Large"
+              className="hidden lg:block w-full h-auto"
+            />
 
-      {/* Submit Now Button */}
-      <div className="absolute bottom-4">
+            {/* Submit Now Button */}
+            {/* <div className="absolute bottom-4">
         <button
           onClick={() => {
             const contactSection = document.getElementById('contactSection');
@@ -151,10 +156,10 @@ import { FiArrowRight } from "react-icons/fi";
             <FiArrowRight className="text-green-900 text-lg sm:text-xl" />
           </div>
         </button>
-      </div>
-    </div>
-  </div>
-)}
+      </div> */}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

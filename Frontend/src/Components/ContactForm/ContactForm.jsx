@@ -4,7 +4,7 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FiArrowRight } from "react-icons/fi";
-import { FaWhatsappSquare,FaCaretDown } from "react-icons/fa";
+import { FaWhatsappSquare, FaCaretDown } from "react-icons/fa";
 import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1).png";
 function ContactForm() {
   // Validation schema using Yup
@@ -75,7 +75,7 @@ function ContactForm() {
             popup: "rounded-xl px-6 py-6 relative",
             closeButton:
               "absolute top-1 right-1 border hover:text-black border-black text-black rounded-full",
-              confirmButton:"text-[#E0FFF1] bg-[#008145]"
+            confirmButton: "text-[#E0FFF1] bg-[#008145]",
           },
         });
       } else {
@@ -90,7 +90,7 @@ function ContactForm() {
         confirmButtonText: "Close",
         customClass: {
           popup: "rounded-xl px-6 py-6 relative",
-          confirmButton:"text-[#E0FFF1] bg-[#008145]"
+          confirmButton: "text-[#E0FFF1] bg-[#008145]",
         },
       });
       console.error("Error details:", error.response || error.message || error);
@@ -160,7 +160,7 @@ function ContactForm() {
                     />
                   </div>
                   <ErrorMessage
-                    name="mobileNumber"
+                    name="mobileNumber  "
                     component="div"
                     className="text-red-500 text-sm"
                   />
@@ -184,16 +184,17 @@ function ContactForm() {
                       <option value="" disabled>
                         Select your location
                       </option>
-                      <option value="Kochi">Kochi</option>
-                      <option value="Calicut">Calicut</option>
-                      <option value="Trivandrum">Trivandrum</option>
-                      <option value="Attingal">Attingal</option>
-                      <option value="Kollam">Kollam</option>
-                      <option value="Kannur">Kannur</option>
-                      <option value="Thrissur">Thrissur</option>
-                      <option value="Perinthalmana">Perinthalmanna</option>
-                      <option value="Kottayam">Kottayam</option>
-                      <option value="Pathanimthitta">Pathanamthitta</option>
+                      <option value="CHN">Kochi</option>
+                      <option value="CLT">Calicut</option>
+                      <option value="TVM">Trivandrum</option>
+                      <option value="ATL">Attingal</option>
+                      <option value="KLM">Kollam</option>
+                      <option value="KNR">Kannur</option>
+                      <option value="TCR">Thrissur</option>
+                      <option value="PER">Perinthalmanna</option>
+                      <option value="KTM">Kottayam</option>
+                      <option value="PTM">Pathanamthitta</option>
+                      <option value="PKD">Palakkad</option>
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
                       <FaCaretDown />
@@ -246,19 +247,19 @@ function ContactForm() {
                       <option value="" disabled>
                         Select your course
                       </option>
-                      <option value="Ai and DM">
+                      <option value="DM">
                         Ai Integrated Digital Marketing
                       </option>
-                      <option value="Industrial Automation">
+                      <option value="INAUT">
                         Industrial Automation
                       </option>
-                      <option value="Software Testing">Software Testing</option>
-                      <option value="Python and DataScience">
+                      <option value="BST">Software Testing</option>
+                      <option value="IT">
                         Python and Data Science
                       </option>
-                      <option value="BMS and CCTV">BMS & CCTV</option>
-                      <option value="Ai">Artificial Intelligence</option>
-                      <option value="Embedded and IOT">Embedded & IoT</option>
+                      <option value="BMS">BMS & CCTV</option>
+                      <option value="PDAI">Artificial Intelligence</option>
+                      <option value="EMB">Embedded & IoT</option>
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
                       <FaCaretDown />
