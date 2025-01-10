@@ -2,26 +2,24 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 // import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useSwipeable } from "react-swipeable";
-import {cards} from "../../Slides/ConstantSlides"
+import { cards } from "../../Slides/ConstantSlides";
 import BottomImage from "../../../src/assets/vectors/WHITE HALF CIRCLE 1 (1).png";
 import Topimage from "../../../src/assets/vectors/Half circle 2 1.png";
-import left from "../../../src/assets/vectors/left.png"
-import right from "../../../src/assets/vectors/rigt.png"
-
-
+import left from "../../../src/assets/vectors/left.png";
+import right from "../../../src/assets/vectors/rigt.png";
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [imagesPerView, setImagesPerView] = useState(3); 
+  const [imagesPerView, setImagesPerView] = useState(3);
   const controls = useAnimation();
   const containerRef = useRef(null);
 
   useEffect(() => {
     const updateImagesPerView = () => {
       if (window.innerWidth >= 1024) {
-        setImagesPerView(3); 
+        setImagesPerView(3);
       } else if ((window, innerWidth >= 786 && window, innerWidth >= 640)) {
-        setImagesPerView(2); 
+        setImagesPerView(2);
       } else {
         setImagesPerView(1);
       }
@@ -67,17 +65,18 @@ const ImageSlider = () => {
         />
       </div>
       <button
-    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
-    onClick={handlePrev}
-  >
-<img src={left} alt="Next" className="text-white w-5 h-5"/>  </button>
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
+        onClick={handlePrev}
+      >
+        <img src={left} alt="Next" className="text-white w-5 h-5" />{" "}
+      </button>
 
-  <button
-    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
-    onClick={handleNext}
-  >
-<img src={right} alt="Next" className="text-white w-5 h-5"/>
-  </button>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-600 bg-opacity-35 rounded-full p-2 text-3xl z-20"
+        onClick={handleNext}
+      >
+        <img src={right} alt="Next" className="text-white w-5 h-5" />
+      </button>
       {/* Sliding Images */}
       <motion.div
         ref={containerRef}
@@ -89,14 +88,13 @@ const ImageSlider = () => {
                 cards.length *
                   (containerRef.current.offsetWidth / imagesPerView) -
                 containerRef.current.offsetWidth
-              ) - 120 
+              ) - 120
             : 0,
           right: 0,
         }}
         dragElastic={0.2}
         onDragEnd={(event, info) => {
-          if (info.offset.x < -50 && currentIndex < maxIndex)
-            handleNext(); 
+          if (info.offset.x < -50 && currentIndex < maxIndex) handleNext();
           else if (info.offset.x > 50 && currentIndex > 0) handlePrev();
         }}
         animate={controls}
@@ -108,7 +106,7 @@ const ImageSlider = () => {
             key={index}
             className="relative flex-shrink-0 "
             style={{
-              width: `${100 / imagesPerView}%`, 
+              width: `${100 / imagesPerView}%`,
               height: "640px",
             }}
           >
@@ -155,7 +153,6 @@ const ImageSlider = () => {
             </button>
           </div>
         ))}
-        
       </motion.div>
       <div className="absolute bottom-0 left-0 right-0 z-10 hidden sm:hidden md:block lg:block xl:block">
         <img

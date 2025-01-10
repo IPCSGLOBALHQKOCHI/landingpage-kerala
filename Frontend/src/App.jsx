@@ -14,6 +14,7 @@ const QuestionSection = React.lazy(() => import("./Pages/QuestionSection"));
 const Footer = React.lazy(() => import("./Components/Footer"));
 
 import StickOnContent from "./Components/StickOnContents";
+import Course from "./Pages/Course";
 // import NeonEffect from "./Components/CursorEffect/NeonEffect";
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       <IntroPage />
       <Contact />
       <Counts />
-      <SignatureCourses />
+      <Course/>
+      {/* <SignatureCourses /> */}
 
       {/* Lazy-load remaining components */}
       <Suspense fallback={<div>...</div>}>

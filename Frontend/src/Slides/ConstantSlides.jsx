@@ -131,7 +131,6 @@ const image6="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/athuly
     },
   ];
 
-
 import imageTest from "../../src/assets/images/softwareTesting.png";
 import imagePython from "../../src/assets/images/pythonandDS.png";
 import imageCCTV from "../../src/assets/images/BMSandCCTV.png";
@@ -149,7 +148,7 @@ export const cards = [
   {
     title1: "Python and",
     title2: "Data Science",
-    description: "PYTHON DATA SCIENCE | <br/> ANDROID APP DEVELOPMENT",
+    description: "HTML | CSS | BOOTSTRAP |<br/> JAVASCRIPT | MySQL | PYTHON",
     image: imagePython,
   },
   {
