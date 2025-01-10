@@ -2,12 +2,12 @@ import React from "react";
 
 function Card({ bgImage, Image, title1, description }) {
   return (
-    <div className="mt-14 xl:ml-8 md:ml-4 xl:mr-0 lg:ml-8 lg:mr-4 md:mr-3 sm:ml-10 sm:mr-10 mr-12 ml-12  gap-0  lg:gap-2 xl:gap-4 xl:w-[24rem] lg:w-[20rem]">
+    <div className="mt-14 xl:ml-8 md:ml-4 xl:mr-0 lg:ml-8 lg:mr-4 md:mr-3 sm:ml-10 sm:mr-10 mr-12 ml-12  gap-0   lg:gap-2 xl:gap-4 xl:w-[24rem] lg:w-[20rem]">
       <div
-        className="relative bg-cover bg-center rounded-2xl shadow-lg"
+        className="relative bg-cover bg-center rounded-2xl shadow-lg sm:h-[400px] h-[330px] "
         style={{
           backgroundImage: `url(${bgImage})`,
-          height: "400px",
+          // height: "400px",
         }}
       >
         <div
@@ -48,7 +48,7 @@ function Card({ bgImage, Image, title1, description }) {
           <img
             src={Image}
             alt={title1}
-            className="self-end right-44 w-[52%] h-[400px]"
+            className="self-end right-44 w-[52%] sm:h-[400px] h-[330px] "
           />
         </div>
       </div>

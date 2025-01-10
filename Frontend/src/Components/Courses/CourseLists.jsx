@@ -7,13 +7,21 @@ import bgImage from "../../../src/assets/images/bg image.png";
 import left from "../../../src/assets/vectors/left.png";
 import right from "../../../src/assets/vectors/rigt.png";
 
-import AiImage from "../../../src/assets/images/Ai image (2).png";
-import BmsCctv from "../../../src/assets/images/bms and cctv.png";
-import EmbeddedIot from "../../../src/assets/images/embedded and iot.png";
-import PythonDs from "../../../src/assets/images/python and ds.png";
-import IndustrialAutomation from "../../../src/assets/images/industrial automation.png";
-import SoftwareTesting from "../../../src/assets/images/software testing.png";
-import Dm from "../../../src/assets/images/DM image.png";
+// import AiImage from "../../../src/assets/images/Ai image (2).png";
+// import BmsCctv from "../../../src/assets/images/bms and cctv.png";
+// import EmbeddedIot from "../../../src/assets/images/embedded and iot.png";
+// import PythonDs from "../../../src/assets/images/python and ds.png";
+// import IndustrialAutomation from "../../../src/assets/images/industrial automation.png";
+// import SoftwareTesting from "../../../src/assets/images/software testing.png";
+// import Dm from "../../../src/assets/images/DM image.png";
+
+const AiImage ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ai-image-2.png"
+const BmsCctv ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/bms-and-cctv.png"
+const EmbeddedIot ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/embedded-and-iot.png"
+const PythonDs ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/python-and-ds.png"
+const IndustrialAutomation ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/industrial-automation.png"
+const SoftwareTesting ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/software-testing.png"
+const Dm ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/DM-image.png"
 
 const cardsData = [
   { Image: SoftwareTesting, title1: "Software Testing", description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION" },
