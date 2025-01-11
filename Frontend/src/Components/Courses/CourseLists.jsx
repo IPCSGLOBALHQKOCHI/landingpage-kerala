@@ -78,7 +78,7 @@ function CourseLists() {
   return (
     <div>
       {/* Carousel view for larger screens */}
-      <div className="hidden sm:block">
+      <div className="">
         <Slider {...settings}>
           {cardsData.map((card, index) => (
             <Card
@@ -93,7 +93,7 @@ function CourseLists() {
       </div>
 
       {/* Stacked view for mobile */}
-      <div className="block sm:hidden">
+      {/* <div className="block sm:hidden">
         {cardsData.map((card, index) => (
           <div key={index} className="mb-6">
             <Card
@@ -104,7 +104,7 @@ function CourseLists() {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

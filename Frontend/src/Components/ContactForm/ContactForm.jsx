@@ -242,7 +242,7 @@ function ContactForm() {
                       as="select"
                       id="course"
                       name="course"
-                      className="w-full px-4 py-2 rounded text-gray-500 focus:outline-none appearance-none"
+                      className="w-full px-4 py-2 rounded text-gray-500 focus:outline-none appearance-none "
                     >
                       <option value="" disabled>
                         Select your course
@@ -250,13 +250,9 @@ function ContactForm() {
                       <option value="DM">
                         Ai Integrated Digital Marketing
                       </option>
-                      <option value="INAUT">
-                        Industrial Automation
-                      </option>
+                      <option value="INAUT">Industrial Automation</option>
                       <option value="BST">Software Testing</option>
-                      <option value="IT">
-                        Python and Data Science
-                      </option>
+                      <option value="IT">Python and Data Science</option>
                       <option value="BMS">BMS & CCTV</option>
                       <option value="PDAI">Artificial Intelligence</option>
                       <option value="EMB">Embedded & IoT</option>

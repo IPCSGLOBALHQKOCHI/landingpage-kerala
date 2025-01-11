@@ -2,17 +2,21 @@ import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import ContactForm from "../Components/ContactForm/ContactForm";
 // import ContactImage from "../../src/assets/images/contactImage.png";
-const ContactImage ="https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/contactImage.png"
+const ContactImage =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2024/12/contactImage.png";
 import LogoVector from "../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 2 (2).png";
 // import WhatsappLogo from "../../src/assets/images/whatsappLogo.png.png";
 function Contact() {
   return (
-    <div id="contactSection" className="w-full h-auto mt-24 bg-white grid grid-rows-[auto_1fr_auto]">
+    <div
+      id="contactSection"
+      className="w-full h-auto mt-24 bg-white grid grid-rows-[auto_1fr_auto]"
+    >
       {/* Content Row */}
       <div className="flex flex-col lg:flex-row justify-start items-center lg:items-start">
         {/* Left Section with Green Gradient and JOIN NOW Text */}
         <div
-          className="relative rounded-2xl overflow-visible w-[80%] sm:w-[75%] md:w-[70%] lg:w-[70%] xl:w-[75%] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[89%] xl:h-[380px] my-4 lg:my-6 lg:ml-32"
+          className="relative rounded-2xl overflow-visible w-[80%] sm:w-[75%] md:w-[70%] lg:w-[70%] xl:w-[75%] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[89%] xl:h-[380px] lg:my-6 lg:ml-32"
           style={{
             background:
               "radial-gradient(circle, rgba(0,60,40,1) 0%, rgba(0,44,26,1) 60%, rgba(0,32,20,1) 100%)",
@@ -56,25 +60,25 @@ function Contact() {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:1/2 p-4 lg:p-0">
+        <div className="w-full lg:1/2 p-1 lg:p-0">
           <ContactForm />
         </div>
       </div>
 
       {/* Button Centered Below */}
       <div className="flex justify-center mt-4 lg:mt-12 mb-6 lg:mb-12">
-  <a
-     href="https://wa.me/919072496664" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center border-2 border-[#014F2A] text-green-600 px-2 lg:px-4 py-2 lg:py-2 rounded-xl"
-  >
-    <IoLogoWhatsapp className="h-9 w-9 pr-2" />
-    <span className="text-lg lg:text-2xl font-medium text-[#026336]">
-      Get Free Admission Counselling
-    </span>
-  </a>
-</div>
+        <a
+          href="https://wa.me/919072496664"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center border-2 border-[#014F2A] text-green-600 px-2 lg:px-4 py-2 lg:py-2 rounded-xl"
+        >
+          <IoLogoWhatsapp className="h-9 w-9 pr-2" />
+          <span className="text-lg lg:text-2xl font-medium text-[#026336]">
+            Get Free Admission Counselling
+          </span>
+        </a>
+      </div>
     </div>
   );
 }
