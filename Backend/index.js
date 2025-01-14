@@ -93,7 +93,7 @@ app.post("/api/submitform", async (req, res) => {
   // Mail options
   const mailOptions = {
     from: "info@ipcsglobal.com", // Sender email
-    to: "ipcsglobalindia@gmail.com", // The constant recipient email
+    to: "ipcsglobalindia@gmail.com,dmmanager.ipcs@gmail.com", // The constant recipient email
     subject: "Lead Form Submission",
     html: emailContent,
   };
