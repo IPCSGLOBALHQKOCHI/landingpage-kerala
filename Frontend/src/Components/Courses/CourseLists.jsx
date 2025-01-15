@@ -25,7 +25,7 @@ const Dm ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/DM-image.
 
 const cardsData = [
   { Image: SoftwareTesting, title1: "Software Testing", description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION" },
-  { Image: PythonDs, title1: "Python & Data Science", description: "HTML | CSS | BOOTSTRAP | JAVASCRIPT | MySQL | PYTHON" },
+  { Image: PythonDs, title1: "Python and Data Science", description: "HTML | CSS | BOOTSTRAP | JAVASCRIPT | MySQL | PYTHON" },
   { Image: BmsCctv, title1: "BMS and CCTV", description: "SECURITY SYSTEM | FIRE ALARM | ACCESS CONTROL SYSTEM" },
   { Image: Dm, title1: "Ai Integrated Digital Marketing", description: "SEO | SEM | SMM | SMO | AFFILIATE MARKETING" },
   { Image: IndustrialAutomation, title1: "Industrial Automation", description: "PLC | SCADA | DCS | CONTROL PANEL DESIGN" },

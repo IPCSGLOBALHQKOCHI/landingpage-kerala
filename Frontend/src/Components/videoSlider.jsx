@@ -125,7 +125,7 @@ const VideoSlider = () => {
             <motion.video
               key={index}
               src={video.src}
-              className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
+              className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[690px] ml-[20px]"
               initial="center"
               animate={Object.keys(imageVariants)[positionIndexes[index]]}
               variants={imageVariants}
