@@ -125,6 +125,6 @@ export const videoSlides = [
   },
   {
     video: "https://www.instagram.com/reel/DCjH4emJLpw/embed",
-  }
+  },
 ];
 // export default slides

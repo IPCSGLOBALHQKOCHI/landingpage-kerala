@@ -11,7 +11,6 @@ const PlacementImageMobile = () => {
 
     return () => clearInterval(interval);
   }, []);
-  // Define the styles
   const contentStyle = {
     opacity: 0,
     transition: "opacity 0.3s ease",
@@ -32,7 +31,7 @@ const PlacementImageMobile = () => {
     fontWeight: 500,
     color: "#ffffff",
     animation: "fadeInUp 1s ease-in-out 0.3s 1 forwards",
-  marginLeft: "30px",
+    marginLeft: "30px",
   };
   const getVisibleSlides = () => {
     return [
@@ -42,13 +41,10 @@ const PlacementImageMobile = () => {
     ];
   };
 
-  
-
   const visibleSlides = getVisibleSlides();
 
   return (
-    <div className="flex-col items-center block md:hidden"
-    >
+    <div className="flex-col items-center block md:hidden">
       <div className="relative overflow-hidden w-full">
         <div className="flex transition-all duration-1000 ease-in-out">
           {visibleSlides.map((slide, index) => (
@@ -62,7 +58,20 @@ const PlacementImageMobile = () => {
                 className="absolute inset-0 flex flex-col z-50 content"
                 style={index === 0 ? activeContentStyle : contentStyle}
               >
-                <div className="name" style={index === 0 ? { fontSize: "28px",marginLeft:"30px", marginTop:"290px", fontWeight: 600, textTransform: "uppercase" } : {}}>
+                <div
+                  className="name"
+                  style={
+                    index === 0
+                      ? {
+                          fontSize: "28px",
+                          marginLeft: "30px",
+                          marginTop: "290px",
+                          fontWeight: 600,
+                          textTransform: "uppercase",
+                        }
+                      : {}
+                  }
+                >
                   {slide.name}
                 </div>
                 <div className="des" style={descriptionStyle}>

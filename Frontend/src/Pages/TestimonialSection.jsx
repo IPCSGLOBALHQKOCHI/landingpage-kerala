@@ -25,7 +25,6 @@ const TestimonialSection = () => {
           ready, we’re eager to take on new challenges and create our future!
         </p>
       </div>
-
       {/* Right Section */}
       <div className="w-full lg:w-1/2 h-auto lg:h-[680px] flex justify-center items-center lg:mt-0">
         <TestimonialsCards />

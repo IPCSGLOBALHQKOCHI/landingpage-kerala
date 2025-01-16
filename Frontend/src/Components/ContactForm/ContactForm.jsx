@@ -7,7 +7,6 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaWhatsappSquare, FaCaretDown } from "react-icons/fa";
 import vectorlogo from "../../../src/assets/vectors/IPCS GLOBAL logo-01 (1) 3 (1).png";
 function ContactForm() {
-  // Validation schema using Yup
   const validationSchema = Yup.object({
     name: Yup.string()
       .required("Name is required")
@@ -21,7 +20,6 @@ function ContactForm() {
     course: Yup.string().required("Course is required"),
   });
 
-  // Initial form values
   const initialValues = {
     name: "",
     mobileNumber: "",
@@ -30,7 +28,6 @@ function ContactForm() {
     course: "",
   };
 
-  // Form submission handler
   const handleClick = async (values) => {
     try {
       const currentDate = new Date();
@@ -99,7 +96,6 @@ function ContactForm() {
 
   return (
     <div className="container mx-auto flex justify-center items-center p-4 sm:p-6">
-      {/* Form container */}
       <div
         className="text-white p-4 rounded-xl shadow-md w-full sm:w-[90%] lg:w-[520px] xl:w-[630px] relative py-7"
         style={{
@@ -136,10 +132,7 @@ function ContactForm() {
                   className="text-red-500 text-sm"
                 />
               </div>
-
-              {/* Mobile Number and Location fields on the same line */}
               <div className="flex flex-wrap sm:flex-nowrap sm:space-x-4 space-y-4 sm:space-y-0">
-                {/* Mobile Number field */}
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="mobileNumber"
@@ -165,8 +158,6 @@ function ContactForm() {
                     className="text-red-500 text-sm"
                   />
                 </div>
-
-                {/* Location field */}
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="location"
@@ -207,10 +198,7 @@ function ContactForm() {
                   />
                 </div>
               </div>
-
-              {/* Email and Course fields on the same line */}
               <div className="flex flex-wrap sm:flex-nowrap sm:space-x-4 space-y-4 sm:space-y-0">
-                {/* Email field */}
                 <div className="w-full">
                   <label htmlFor="email" className="block text-sm sm:text-base">
                     Email
@@ -228,8 +216,6 @@ function ContactForm() {
                     className="text-red-500 text-sm"
                   />
                 </div>
-
-                {/* Course field */}
                 <div className="w-full relative">
                   <label
                     htmlFor="course"
@@ -268,8 +254,6 @@ function ContactForm() {
                   />
                 </div>
               </div>
-
-              {/* Submit Button */}
               <div className="flex justify-center mt-4">
                 <button
                   type="submit"
@@ -285,11 +269,9 @@ function ContactForm() {
             </Form>
           )}
         </Formik>
-
-        {/* Logo in the bottom-right corner */}
         <div className="absolute bottom-3 sm:bottom-0 right-5 sm:right-0">
           <img
-            src={vectorlogo} // Replace with your logo path
+            src={vectorlogo}
             alt="Logo"
             className="w-28 h-20 sm:w-28 sm:h-28 opacity-10"
           />

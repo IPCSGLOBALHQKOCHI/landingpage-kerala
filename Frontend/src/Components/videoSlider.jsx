@@ -101,7 +101,6 @@ const VideoSlider = () => {
       className="relative flex items-center justify-center "
       {...swipeHandlers}
     >
-      {/* Navigation Arrows */}
       <button
         onClick={handleNext}
         className="absolute hidden sm:hidden md:hidden lg:block  left-4 top-1/2 transform -translate-y-1/2 bg-gray-600 bg-opacity-25 p-2 sm:p-3 rounded-full z-10 
@@ -117,8 +116,6 @@ const VideoSlider = () => {
       >
         <img src={right} alt="Previous" className="text-white w-3 h-3" />
       </button>
-
-      {/* Video Carousel */}
       <div className="w-full md:w-5/12 flex justify-center items-center relative">
         {videos.map((video, index) => {
           return (
@@ -136,7 +133,7 @@ const VideoSlider = () => {
               poster={video.poster}
               muted
               preload="auto"
-              ref={(el) => (videoRefs.current[index] = el)} // Store video ref
+              ref={(el) => (videoRefs.current[index] = el)}
             />
           );
         })}

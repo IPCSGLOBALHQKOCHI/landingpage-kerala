@@ -1,6 +1,11 @@
 import React from "react";
 import Logo from "../../src/assets/images/image 26.png";
-import { FaFacebook, FaInstagram, FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneSquareAlt,
+} from "react-icons/fa";
 import { IoLogoYoutube, IoIosMail } from "react-icons/io";
 import { AiOutlineGlobal } from "react-icons/ai";
 
@@ -71,7 +76,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links Section */}
         <div className="lg:w-60">
           <h4 className="text-lg sm:text-xl font-semibold text-center lg:text-left text-black mb-4">
             Quick Links

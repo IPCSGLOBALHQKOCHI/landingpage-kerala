@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import whatsappIcon from "../../src/assets/images/whatsapp_3670133.png";
 import CallIcon from "../../src/assets/images/telephone_724664.png";
 import { TbMessageCircleSearch } from "react-icons/tb";
-import mobile from "../../src/assets/images/mobilepopup.png";
-import desktop from "../../src/assets/images/webpopup.png";
-import { FiArrowRight } from "react-icons/fi";
+// import mobile from "../../src/assets/images/mobilepopup.png";
+// import desktop from "../../src/assets/images/webpopup.png";
+// import { FiArrowRight } from "react-icons/fi";
 
 const StickOnContents = () => {
   const [showText, setShowText] = useState(false);
   // const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    // Cycle between text and icon for the "Enquire Now" button
     const cycleStates = () => {
       setShowText(false);
       setTimeout(() => {
@@ -35,18 +34,13 @@ const StickOnContents = () => {
 
   return (
     <div className="fixed bottom-2 right-5 flex flex-col items-end space-y-4 z-50">
-      {/* Icons Container */}
       <div className="flex flex-col items-end space-y-2">
-        {/* Call Button */}
         <a
           href="tel:+91 98467 70771"
           className="w-[52px] h-[52px] rounded-full flex items-center justify-center"
         >
           <img src={CallIcon} alt="Call Icon" />
         </a>
-
-        {/* WhatsApp Button */}
-        {/* <WhatsappBot/> */}
         <a
           href="https://wa.me/919072496664"
           target="_blank"
@@ -67,8 +61,6 @@ const StickOnContents = () => {
           <img src={whatsappIcon} alt="WhatsApp Icon" />
         </button> */}
       </div>
-
-      {/* Enquire Now Button */}
       <div>
         <button
           onClick={() =>
@@ -79,7 +71,7 @@ const StickOnContents = () => {
           className="flex items-center justify-center px-6 py-6 rounded-full text-black font-semibold text-base transition-all duration-500 ease-in-out"
           style={{
             background: "linear-gradient(to right, #FFE902 0%, #FEBE10 100%)",
-            width: showText ? "200px" : "60px", // Smooth width transition
+            width: showText ? "200px" : "60px",
           }}
         >
           <div

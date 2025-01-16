@@ -6,7 +6,6 @@ import StickOnContent from "./Components/StickOnContents";
 import Course from "./Pages/Course";
 import YoutubeSection from "./Pages/YoutubeSection";
 
-// Lazy load the remaining components
 const Placement = React.lazy(() => import("./Pages/Placement"));
 const SuccessStrories = React.lazy(() => import("./Pages/SuccessStrories"));
 const TestimonialSection = React.lazy(() =>
@@ -15,24 +14,19 @@ const TestimonialSection = React.lazy(() =>
 const QuestionSection = React.lazy(() => import("./Pages/QuestionSection"));
 const Footer = React.lazy(() => import("./Components/Footer"));
 
-// import NeonEffect from "./Components/CursorEffect/NeonEffect";
-
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      {/* <NeonEffect /> */}
       <StickOnContent />
       <IntroPage />
       <Contact />
       <Counts />
-      <Course/>
-
-      {/* Lazy-load remaining components */}
+      <Course />
       <Suspense fallback={<div>...</div>}>
         <Placement />
         <SuccessStrories />
         <TestimonialSection />
-        <YoutubeSection/>
+        <YoutubeSection />
         <QuestionSection />
         <Footer />
       </Suspense>

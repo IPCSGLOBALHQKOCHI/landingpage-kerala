@@ -15,22 +15,57 @@ import right from "../../../src/assets/vectors/rigt.png";
 // import SoftwareTesting from "../../../src/assets/images/software testing.png";
 // import Dm from "../../../src/assets/images/DM image.png";
 
-const AiImage ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ai-image-2.png"
-const BmsCctv ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/bms-and-cctv.png"
-const EmbeddedIot ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/embedded-and-iot.png"
-const PythonDs ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/python-and-ds.png"
-const IndustrialAutomation ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/industrial-automation.png"
-const SoftwareTesting ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/software-testing.png"
-const Dm ="https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/DM-image.png"
+const AiImage =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ai-image-2.png";
+const BmsCctv =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/bms-and-cctv.png";
+const EmbeddedIot =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/embedded-and-iot.png";
+const PythonDs =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/python-and-ds.png";
+const IndustrialAutomation =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/industrial-automation.png";
+const SoftwareTesting =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/software-testing.png";
+const Dm =
+  "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/DM-image.png";
 
 const cardsData = [
-  { Image: SoftwareTesting, title1: "Software Testing", description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION" },
-  { Image: PythonDs, title1: "Python and Data Science", description: "HTML | CSS | BOOTSTRAP | JAVASCRIPT | MySQL | PYTHON" },
-  { Image: BmsCctv, title1: "BMS and CCTV", description: "SECURITY SYSTEM | FIRE ALARM | ACCESS CONTROL SYSTEM" },
-  { Image: Dm, title1: "Ai Integrated Digital Marketing", description: "SEO | SEM | SMM | SMO | AFFILIATE MARKETING" },
-  { Image: IndustrialAutomation, title1: "Industrial Automation", description: "PLC | SCADA | DCS | CONTROL PANEL DESIGN" },
-  { Image: AiImage, title1: "Artificial Intelligence", description: "TENSORFLOW | KERAS" },
-  { Image: EmbeddedIot, title1: "Embedded & IoT", description: "PIC | ARM | RASPBERRY PI ARDUINO MICROCONTROLLER" },
+  {
+    Image: SoftwareTesting,
+    title1: "Software Testing",
+    description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION",
+  },
+  {
+    Image: PythonDs,
+    title1: "Python and Data Science",
+    description: "HTML | CSS | BOOTSTRAP | JAVASCRIPT | MySQL | PYTHON",
+  },
+  {
+    Image: BmsCctv,
+    title1: "BMS and CCTV",
+    description: "SECURITY SYSTEM | FIRE ALARM | ACCESS CONTROL SYSTEM",
+  },
+  {
+    Image: Dm,
+    title1: "Ai Integrated Digital Marketing",
+    description: "SEO | SEM | SMM | SMO | AFFILIATE MARKETING",
+  },
+  {
+    Image: IndustrialAutomation,
+    title1: "Industrial Automation",
+    description: "PLC | SCADA | DCS | CONTROL PANEL DESIGN",
+  },
+  {
+    Image: AiImage,
+    title1: "Artificial Intelligence",
+    description: "TENSORFLOW | KERAS",
+  },
+  {
+    Image: EmbeddedIot,
+    title1: "Embedded & IoT",
+    description: "PIC | ARM | RASPBERRY PI ARDUINO MICROCONTROLLER",
+  },
 ];
 
 const CustomNextArrow = ({ onClick }) => (
@@ -61,13 +96,13 @@ function CourseLists() {
     prevArrow: <CustomPrevArrow />,
     responsive: [
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 1024, 
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         },
@@ -77,7 +112,6 @@ function CourseLists() {
 
   return (
     <div>
-      {/* Carousel view for larger screens */}
       <div className="">
         <Slider {...settings}>
           {cardsData.map((card, index) => (
