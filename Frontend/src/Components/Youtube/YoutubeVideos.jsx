@@ -56,6 +56,9 @@ const YoutubeVideos = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    swipeToSlide: true,
+    touchMove: true,
+    draggable: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     responsive: [
@@ -69,6 +72,8 @@ const YoutubeVideos = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          swipeToSlide: true,
+          touchMove: true,
         },
       },
     ],

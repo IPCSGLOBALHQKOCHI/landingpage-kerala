@@ -15,6 +15,21 @@ import right from "../../../src/assets/vectors/rigt.png";
 // import SoftwareTesting from "../../../src/assets/images/software testing.png";
 // import Dm from "../../../src/assets/images/DM image.png";
 
+// const AiImageMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ai-image-2.png";
+// const BmsCctvMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/bms-and-cctv.png";
+// const EmbeddedIotMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/embedded-and-iot.png";
+// const PythonDsMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/python-and-ds.png";
+// const IndustrialAutomationMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/industrial-automation.png";
+// const SoftwareTestingMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/software-testing.png";
+// const DmMob =
+//   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/DM-image.png";
+
 const AiImage =
   "https://campaigns.ipcsglobal.com/wp-content/uploads/2025/01/Ai-image-2.png";
 const BmsCctv =
@@ -32,37 +47,44 @@ const Dm =
 
 const cardsData = [
   {
-    Image: SoftwareTesting,
+    ImageDesktop: SoftwareTesting,
+    // ImageMobile: SoftwareTestingMob,
     title1: "Software Testing",
     description: "SELENIUM WEBDRIVER | JIRA | CI/CD INTEGRATION",
   },
   {
-    Image: PythonDs,
+    ImageDesktop: PythonDs,
+    // ImageMobile: PythonDsMob,
     title1: "Python and Data Science",
     description: "HTML | CSS | BOOTSTRAP | JAVASCRIPT | MySQL | PYTHON",
   },
   {
-    Image: BmsCctv,
+    ImageDesktop: BmsCctv,
+    // ImageMobile: BmsCctvMob,
     title1: "BMS and CCTV",
     description: "SECURITY SYSTEM | FIRE ALARM | ACCESS CONTROL SYSTEM",
   },
   {
-    Image: Dm,
+    ImageDesktop: Dm,
+    // ImageMobile: DmMob,
     title1: "Ai Integrated Digital Marketing",
     description: "SEO | SEM | SMM | SMO | AFFILIATE MARKETING",
   },
   {
-    Image: IndustrialAutomation,
+    ImageDesktop: IndustrialAutomation,
+    // ImageMobile: IndustrialAutomationMob,
     title1: "Industrial Automation",
     description: "PLC | SCADA | DCS | CONTROL PANEL DESIGN",
   },
   {
-    Image: AiImage,
+    ImageDesktop: AiImage,
+    // ImageMobile: AiImageMob,
     title1: "Artificial Intelligence",
     description: "TENSORFLOW | KERAS",
   },
   {
-    Image: EmbeddedIot,
+    ImageDesktop: EmbeddedIot,
+    // ImageMobile: EmbeddedIotMob,
     title1: "Embedded & IoT",
     description: "PIC | ARM | RASPBERRY PI ARDUINO MICROCONTROLLER",
   },
@@ -116,11 +138,11 @@ function CourseLists() {
         <Slider {...settings}>
           {cardsData.map((card, index) => (
             <Card
-              key={index}
-              bgImage={bgImage}
-              Image={card.Image}
-              title1={card.title1}
-              description={card.description}
+            key={index}
+            bgImage={bgImage}
+            ImageDesktop={card.ImageDesktop}
+            title1={card.title1}
+            description={card.description}
             />
           ))}
         </Slider>

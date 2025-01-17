@@ -46,7 +46,7 @@ const IntroPage = () => {
           </h1>
 
           <h2 className="absolute text-center text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white mt-[200px] sm:mt-[225px] md:mt-[230px] lg:mt-[240px] xl:mt-[225px] ml-2 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 break-words sm:whitespace-nowrap xs:mt-[180px]">
-            Industry Based Training Institute
+            Industry-Based Training Institute
           </h2>
 
           <h4 className="absolute text-justify tracking-wide text-lg sm:text-base md:text-md lg:text-lg xl:text-xl font-light text-white mt-[290px] sm:mt-[278px] md:mt-[280px] lg:mt-[300px] xl:mt-[295px] ml-7 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 w-full !pr-12 sm:w-[340px] md:w-[400px] lg:w-[530px] xl:w-[640px] break-words whitespace-wrap xs:mt-[270px]">

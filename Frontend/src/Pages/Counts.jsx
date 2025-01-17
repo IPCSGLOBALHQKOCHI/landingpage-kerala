@@ -13,7 +13,7 @@ function Counts() {
         <h4 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-4 text-[#026336] bg-opacity-100">
           30+
         </h4>
-        <h6 className="text-black text-center mt-4 font-semibold text-lg">
+        <h6 className="text-black text-center mt-4 font-semibold text-lg mx-2">
           Presence Across Country
         </h6>
       </div>
@@ -24,7 +24,7 @@ function Counts() {
         <h4 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-4 text-[#026336] bg-opacity-100">
           1200+
         </h4>
-        <h6 className="text-black text-center mt-4  font-semibold text-lg">
+        <h6 className="text-black text-center mt-4  font-semibold text-lg mx-3">
           Industrial Projects
         </h6>
       </div>
@@ -35,7 +35,7 @@ function Counts() {
         <h4 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-4 text-[#026336] bg-opacity-100">
           15000
         </h4>
-        <h6 className="text-black text-center mt-4 font-semibold text-lg">
+        <h6 className="text-black text-center mt-4 font-semibold text-lg mx-2">
           Trained Professionals
         </h6>
       </div>
@@ -46,7 +46,7 @@ function Counts() {
         <h4 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-4 text-[#026336] bg-opacity-100">
           120+
         </h4>
-        <h6 className="text-black text-center mt-4 font-semibold text-lg">
+        <h6 className="text-black text-center mt-4 font-semibold text-lg mx-2">
           Corporate Partners
         </h6>
       </div>

@@ -1,10 +1,10 @@
 import React from "react";
 
-function Card({ bgImage, Image, title1, description }) {
+function Card({ bgImage, ImageDesktop, title1, description }) {
   return (
     <div className="mt-10 sm:mt-14 xl:ml-4 md:ml-3 xl:mr-0 lg:ml-4 lg:mr-4 md:mr-3 sm:ml-10 sm:mr-10 mr-4 ml-4  gap-0   lg:gap-2 xl:gap-4 xl:w-[93%] lg:w-[90%]">
       <div
-        className="relative bg-cover bg-center rounded-2xl shadow-lg sm:h-[400px] h-[330px] "
+        className="relative bg-cover bg-center rounded-2xl shadow-lg sm:h-[400px] h-[380px] "
         style={{
           backgroundImage: `url(${bgImage})`,
         }}
@@ -45,9 +45,9 @@ function Card({ bgImage, Image, title1, description }) {
             </div>
           </div>
           <img
-            src={Image}
+            src={ImageDesktop}
             alt={title1}
-            className="self-end right-44 w-[52%] sm:h-[350px] h-[330px] mt-12 "
+            className="self-end right-44 sm:w-[52%] w-[58%] sm:h-[380px] h-[380px] mt-6 "
           />
         </div>
       </div>

@@ -4,7 +4,7 @@ function Course() {
   return (
     <div
       id="courses"
-      className=" absloute w-full h-[380px] sm:h-[480px]  mt-20 mb-40"
+      className=" absloute w-full h-[410px] sm:h-[480px]  mt-20 mb-44"
     >
       <div>
         <h1 className="text-black text-center text-4xl font-bold">
