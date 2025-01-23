@@ -47,6 +47,7 @@ function Card({ bgImage, ImageDesktop, title1, description }) {
           <img
             src={ImageDesktop}
             alt={title1}
+            loading="lazy"
             className="self-end right-44 sm:w-[52%] w-[58%] sm:h-[380px] h-[380px] mt-6 "
           />
         </div>

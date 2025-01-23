@@ -104,27 +104,6 @@ export const videoSlides = [
   },
   {
     video: "https://www.instagram.com/reel/DCjH4emJLpw/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DCYsanBPJw3/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DCYtAp7J_hf/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DCYuQqHKRIk/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DC_nq7MpjgX/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DEfDE8fPqmA/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DC7AH-azDgs/embed",
-  },
-  {
-    video: "https://www.instagram.com/reel/DCjH4emJLpw/embed",
-  },
+  }
 ];
 // export default slides

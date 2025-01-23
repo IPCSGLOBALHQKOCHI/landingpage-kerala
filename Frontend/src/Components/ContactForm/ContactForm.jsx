@@ -153,7 +153,7 @@ function ContactForm() {
                     />
                   </div>
                   <ErrorMessage
-                    name="mobileNumber  "
+                    name="mobileNumber"
                     component="div"
                     className="text-red-500 text-sm"
                   />
